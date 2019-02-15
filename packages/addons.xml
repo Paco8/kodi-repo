@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="plugin.video.netflix" name="Netflix" provider-name="libdev + jojo + asciidisco" version="0.13.22~mod1">
+  <requires>
+    <import addon="xbmc.python" version="2.25.0" />
+    <import addon="script.module.requests" version="2.12.4" />
+    <import addon="script.module.pycryptodome" version="3.4.3" />
+    <import addon="script.module.inputstreamhelper" version="0.3.3" />
+    <import addon="script.module.addon.signals" version="0.0.3" />
+  </requires>
+  <extension library="addon.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="service.py" point="xbmc.service" start="login" />
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="de_DE">Netflix</summary>
+    <description lang="de_DE">Addon für Netflix VOD Services</description>
+    <disclaimer lang="de_DE">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
+    <summary lang="en_GB">Netflix</summary>
+    <description lang="en_GB">Netflix VOD Services Addon</description>
+    <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+    </assets>
+    <language>en de es he hr it nl pl pt sk sv</language>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://www.netflix.com</website>
+    <email>public at asciidisco dot com</email>
+    <forum>https://www.kodinerds.net/index.php/Thread/55612-PreRelease-Plugin-Netflix-Inputstream/</forum>
+    <source>https://github.com/asciidisco/plugin.video.netflix</source>
+    <news>
+v0.13.20 (2018-11-29)
+- MSLv2 for manifest retrieval
+
+v0.13.19 (2018-11-24)
+- Fix VTT / VP9 issues
+
+v0.13.18 (2018-11-17)
+- Write correct codec into VP9 MPEG DAS profiles
+
+v0.13.17 (2018-11-16)
+- Add VP9 profiles to avoid PRK exception while downloading manifest
+- Android ESN generation enhanced
+
+v0.13.16 (2018-11-13)
+- WebVTT subtitles
+
+v0.13.13 (2018-09-13)
+- Fix disabling of intro skipping not working
+
+v0.13.12 (2018-08-21)
+- Fix issues with timeline markers
+
+v0.13.11 (2018-08-20)
+- Fix login issues
+- Fix fanarts for non-netflix originals
+- Add Korean translation
+- Update Italian translation
+- Add query parameter widget_display to suppress setting custom view modes when called from a widget
+- Skip intro and recap
+- Remember audio settings across all episodes of a show
+
+v0.13.9 (2018-06-14)
+- fix login issues after typo fix in netflix login page
+
+v0.13.8 (2018-06-07)
+- fix proxy communication
+- fix folder definition for image resources
+
+v0.13.7 (2018-05-28)
+- rework of login info parsing
+
+v0.13.0 (2018-04-26)
+- Android support WIDEVINE Cryptosession for MSL
+
+v0.12.9 (2018-04-16)
+- View for exported
+- Support for inputstreamhelper
+- Grab metadate for episodes on export
+- Auto export new episodes for exported shows
+- Auto update watched status inside kodi library
+    </news>
+  </extension>
+</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.6.7~mod1">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0" />
+    <import addon="script.module.beautifulsoup" version="3.2.1" />
+    <import addon="script.module.mechanize" version="0.2.6" />
+    <import addon="script.module.pydes" version="2.0.1" />
+    <import addon="script.module.pyxbmct" version="1.1.7" />
+    <import addon="script.module.inputstreamhelper" version="0.2.4" />
+    <import addon="script.module.requests" version="2.9.1" />
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource">
+	<provides>video</provides>
+  </extension>
+  <extension library="service.py" point="xbmc.service" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en">Amazon Prime Video Streaming</summary>
+    <summary lang="de">Amazon Prime Instant Video</summary>
+    <description lang="en">Movies and Television Shows for Prime Members</description>
+    <description lang="de">Filme und Serien für Amazon Prime Mitglieder</description>
+    <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.
+This Addon uses pyDes by Todd Whiteman</disclaimer>
+    <disclaimer lang="de">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.
+Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
+     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://www.kodinerds.net/index.php/Thread/44211-Release-Amazon-Prime-Instant-Video</forum>
+    <source>https://github.com/Sandmann79/xbmc</source>
+  </extension>
+</addon><addon id="script.module.pydes" name="pyDes" provider-name="Todd Whiteman" version="2.0.1">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">A pure python module which implements the DES and Triple-DES encryption algorithms.</summary>
+    <website>http://twhiteman.netfirms.com/des.html</website> 
+    <license>Public Domain</license> 
+    <platform>all</platform> 
+    <source>http://sourceforge.net/projects/pydes/</source> 
+  </extension>
+</addon><addon id="repository.paco8" name="Paco8 Repository" provider-name="Paco8" version="1.0.0">
+	<extension name="Paco8 Repository" point="xbmc.addon.repository">
+		<info compressed="false">http://192.168.1.4/~ricardo/kodi_repo/addons.xml</info>
+		<checksum>http://192.168.1.4/~ricardo/kodi_repo/addons.xml.md5</checksum>
+		<datadir zip="true">http://192.168.1.4/~ricardo/kodi_repo</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Test Repo</summary>
+		<description />
+		<disclaimer />
+		<platform>all</platform>
+	</extension>
+</addon></addons>
