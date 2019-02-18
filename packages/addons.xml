@@ -127,7 +127,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
     <platform>all</platform> 
     <source>http://sourceforge.net/projects/pydes/</source> 
   </extension>
-</addon><addon id="repository.paco8" name="Paco8 Repository" provider-name="Paco8" version="1.0.0">
+</addon><addon id="repository.paco8" name="Paco8 Repository" provider-name="Paco8" version="1.0.1">
 	<extension name="Paco8 Repository" point="xbmc.addon.repository">
 		<info compressed="false">https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages/addons.xml.md5</checksum>
