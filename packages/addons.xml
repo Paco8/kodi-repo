@@ -148,7 +148,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
 		<disclaimer />
 		<platform>all</platform>
 	</extension>
-</addon><addon id="plugin.video.netflix-test" name="Netflix" provider-name="libdev + jojo + asciidisco + caphm + castagnait" version="0.14.5~beta-20190620">
+</addon><addon id="plugin.video.netflix-test" name="Netflix2" provider-name="libdev + jojo + asciidisco + caphm + castagnait" version="0.14.5~beta-20190626">
   <requires>
     <import addon="xbmc.python" version="2.26.0" />
     <import addon="script.module.requests" version="2.12.4" />
