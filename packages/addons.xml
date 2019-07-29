@@ -95,7 +95,7 @@ v0.12.9 (2018-04-16)
 - Auto update watched status inside kodi library
     </news>
   </extension>
-</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.7.4~beta-20190703">
+</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.7.4~beta-20190729">
   <requires>
     <import addon="xbmc.python" version="2.24.0" />
     <import addon="script.module.beautifulsoup" version="3.2.1" />
