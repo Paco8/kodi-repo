@@ -124,7 +124,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
     <forum>http://www.kodinerds.net/index.php/Thread/44211-Release-Amazon-Prime-Instant-Video</forum>
     <source>https://github.com/Sandmann79/xbmc</source>
   </extension>
-</addon><addon id="plugin.video.hbogoeu" name="HBO GO EU" provider-name="arvvoid" version="2.0.12~beta28-20190903">
+</addon><addon id="plugin.video.hbogoeu" name="HBO GO EU" provider-name="arvvoid" version="2.0.12~beta28-20190904">
   <requires>
     <import addon="xbmc.python" version="2.25.0" />
     <import addon="script.module.requests" version="2.12.4" />
