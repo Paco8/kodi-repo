@@ -28,6 +28,36 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
     <forum>http://www.kodinerds.net/index.php/Thread/44211-Release-Amazon-Prime-Instant-Video</forum>
     <source>https://github.com/Sandmann79/xbmc</source>
   </extension>
+</addon><addon id="plugin.video.amazon-test2" name="Amazon VOD 2" provider-name="Sandmann79, Varstahl" version="0.7.9~beta-20191119">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0" />
+    <import addon="script.module.beautifulsoup4" version="4.6.2" />
+    <import addon="script.module.mechanicalsoup" version="0.12.0" />
+    <import addon="script.module.pydes" version="2.0.1" />
+    <import addon="script.module.pyxbmct" version="1.1.7" />
+    <import addon="script.module.inputstreamhelper" version="0.2.4" />
+    <import addon="script.module.requests" version="2.9.1" />
+    <import addon="script.module.kodi-six" version="0.0.5" />
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource">
+	<provides>video</provides>
+  </extension>
+  <extension library="service.py" point="xbmc.service" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en">Amazon Prime Video Streaming</summary>
+    <summary lang="de">Amazon Prime Instant Video</summary>
+    <description lang="en">Movies and Television Shows for Prime Members</description>
+    <description lang="de">Filme und Serien für Amazon Prime Mitglieder</description>
+    <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.
+This Addon uses pyDes by Todd Whiteman</disclaimer>
+    <disclaimer lang="de">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.
+Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
+     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum>http://www.kodinerds.net/index.php/Thread/44211-Release-Amazon-Prime-Instant-Video</forum>
+    <source>https://github.com/Sandmann79/xbmc</source>
+  </extension>
 </addon><addon id="plugin.video.hbogoeu" name="HBO GO EU" provider-name="arvvoid" version="2.0.21~beta39-20191111">
   <requires>
     <import addon="xbmc.python" version="2.26.0" />
