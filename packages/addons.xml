@@ -28,7 +28,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
     <forum>http://www.kodinerds.net/index.php/Thread/44211-Release-Amazon-Prime-Instant-Video</forum>
     <source>https://github.com/Sandmann79/xbmc</source>
   </extension>
-</addon><addon id="plugin.video.amazon-test2" name="Amazon VOD 2" provider-name="Sandmann79, Varstahl" version="0.7.9~beta-20191119">
+</addon><addon id="plugin.video.amazon-test2" name="Amazon VOD 2" provider-name="Sandmann79, Varstahl" version="0.7.9~beta-20191122">
   <requires>
     <import addon="xbmc.python" version="2.24.0" />
     <import addon="script.module.beautifulsoup4" version="4.6.2" />
