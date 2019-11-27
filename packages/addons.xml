@@ -1,34 +1,100 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.7.5~beta-20191102">
+<addons><addon id="plugin.video.netflix" name="Netflix" provider-name="libdev + jojo + asciidisco + caphm + castagnait" version="0.15.5~beta-20191015">
   <requires>
-    <import addon="xbmc.python" version="2.24.0" />
-    <import addon="script.module.beautifulsoup" version="3.2.1" />
-    <import addon="script.module.mechanize" version="0.2.6" />
-    <import addon="script.module.pydes" version="2.0.1" />
-    <import addon="script.module.pyxbmct" version="1.1.7" />
-    <import addon="script.module.inputstreamhelper" version="0.2.4" />
-    <import addon="script.module.requests" version="2.9.1" />
+    <import addon="xbmc.python" version="2.26.0" />
+    <import addon="script.module.addon.signals" version="0.0.3" />
+    <import addon="script.module.inputstreamhelper" version="0.3.3" />
+    <import addon="script.module.pycryptodome" version="3.4.3" />
+    <import addon="script.module.requests" version="2.12.4" />
   </requires>
-  <extension library="default.py" point="xbmc.python.pluginsource">
-	<provides>video</provides>
+  <extension library="addon.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
   </extension>
-  <extension library="service.py" point="xbmc.service" start="startup" />
+  <extension library="service.py" point="xbmc.service" />
+  <extension library="modules/enum" point="xbmc.python.module" />
+  <extension library="modules/mysql-connector-python" point="xbmc.python.module" />
   <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
     <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en">Amazon Prime Video Streaming</summary>
-    <summary lang="de">Amazon Prime Instant Video</summary>
-    <description lang="en">Movies and Television Shows for Prime Members</description>
-    <description lang="de">Filme und Serien für Amazon Prime Mitglieder</description>
-    <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.
-This Addon uses pyDes by Todd Whiteman</disclaimer>
-    <disclaimer lang="de">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.
-Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
-     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum>http://www.kodinerds.net/index.php/Thread/44211-Release-Amazon-Prime-Instant-Video</forum>
-    <source>https://github.com/Sandmann79/xbmc</source>
+    <summary lang="de_DE">Netflix</summary>
+    <description lang="de_DE">Addon für Netflix VOD Services</description>
+    <disclaimer lang="de_DE">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
+    <summary lang="en_GB">Netflix</summary>
+    <description lang="en_GB">Netflix VOD Services Addon</description>
+    <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <summary lang="nl_NL">Netflix</summary>
+    <description lang="nl_NL">Bekijk Netflix films en tvprogramma's in Kodi.</description>
+    <disclaimer lang="nl_NL">Sommige delen van deze add-on zijn mogelijk onwettig in jouw land - raadpleeg de lokale wetgeving alvorens deze add-on te installeren.</disclaimer>
+    <description lang="it_IT">Netflix Addon servizi VOD</description>
+    <disclaimer lang="it_IT">Alcune parti di questo addon potrebbero non essere legali nel proprio paese di residenza - si prega di verificare le leggi locali prima dell'installazione.</disclaimer>
+    <assets>
+      <icon>resources/media/icon.png</icon>
+      <fanart>resources/media/fanart.jpg</fanart>
+      <screenshot>resources/media/screenshot-01.jpg</screenshot>
+      <screenshot>resources/media/screenshot-02.jpg</screenshot>
+      <screenshot>resources/media/screenshot-03.jpg</screenshot>
+    </assets>
+    <language>en de es he hr it nl pl pt sk sv</language>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://www.netflix.com</website>
+    <email />
+    <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
+    <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
+    <news>
+v0.15.5 (2019-10-12)
+-Speedup loading lists due to the new login validity check
+-Cookies expires are now used to check a valid login
+-Fixed an issue introduced with previous version causing login error
+-Fixed double handshake request on first run
+
+v0.15.4 (2019-10-11)
+-Added InputStream Helper settings in settings menu
+-Fixed add/remove to mylist on huge lists
+-Fixed expired mastertoken key issue
+-Fixed skipping sections due to netflix changes
+-Manifests now are requested only once
+-Updated pt-br, de, es translations
+-Minor improvements
+
+v0.15.3 (2019-09-19)
+-Initial conversion to python 3
+-Initial integration tests
+-Implemented device uuid to avoid always asking credentials
+-Fixed a problem when library source is special:// or a direct path
+-Fixed run library update on slow system like RPI
+-Updated dutch language
+-Minor fixes
+
+v0.15.2 (2019-08-30)
+-Fixed key handshake at addon first run
+-Fixed library update service at first run
+-Local database now dynamically created by code
+-Profile data is not deleted if an problem occurred
+-Minor fixes
+
+v0.15.1 (2019-08-25)
+-Fixed wrong path to linux systems
+
+v0.15.0 (2019-08-20)
+-Implemented data management through database
+-Implemented automatic export of new episodes
+-Implemented a version upgrade system
+-Implemented management of login errors
+-Added a new context menu "Export new episodes" for a single tv show
+-Added ability to exclude (and re-include) a tv show from library auto update
+-Added possibility to share the same library with multiple devices (MySQL server is required)
+-No more concurrency and data loss problems of previous "persistent storage"
+-Fixed continuous "new access" email notification from netflix
+-Fixed locale id error
+-Fixed automatic library updates
+-Fixed logout now the profiles are no longer accessible and you can enter your credentials
+-Fixed exporting tvshow.nfo for a single episode
+-Fixed UpNext watched status from Kodi library
+-Fixed issue with library items that containing % in the path
+-Other minor improvements and fixes
+    </news>
   </extension>
-</addon><addon id="plugin.video.amazon-test2" name="Amazon VOD 2" provider-name="Sandmann79, Varstahl" version="0.7.9~beta-20191122">
+</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.8.0~beta-20191127">
   <requires>
     <import addon="xbmc.python" version="2.24.0" />
     <import addon="script.module.beautifulsoup4" version="4.6.2" />
@@ -208,99 +274,4 @@ v.2.0.17-beta34
 		<disclaimer />
 		<platform>all</platform>
 	</extension>
-</addon><addon id="plugin.video.netflix" name="Netflix" provider-name="libdev + jojo + asciidisco + caphm + castagnait" version="0.15.5~beta-20191015">
-  <requires>
-    <import addon="xbmc.python" version="2.26.0" />
-    <import addon="script.module.addon.signals" version="0.0.3" />
-    <import addon="script.module.inputstreamhelper" version="0.3.3" />
-    <import addon="script.module.pycryptodome" version="3.4.3" />
-    <import addon="script.module.requests" version="2.12.4" />
-  </requires>
-  <extension library="addon.py" point="xbmc.python.pluginsource">
-    <provides>video</provides>
-  </extension>
-  <extension library="service.py" point="xbmc.service" />
-  <extension library="modules/enum" point="xbmc.python.module" />
-  <extension library="modules/mysql-connector-python" point="xbmc.python.module" />
-  <extension point="xbmc.addon.metadata">
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="de_DE">Netflix</summary>
-    <description lang="de_DE">Addon für Netflix VOD Services</description>
-    <disclaimer lang="de_DE">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
-    <summary lang="en_GB">Netflix</summary>
-    <description lang="en_GB">Netflix VOD Services Addon</description>
-    <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-    <summary lang="nl_NL">Netflix</summary>
-    <description lang="nl_NL">Bekijk Netflix films en tvprogramma's in Kodi.</description>
-    <disclaimer lang="nl_NL">Sommige delen van deze add-on zijn mogelijk onwettig in jouw land - raadpleeg de lokale wetgeving alvorens deze add-on te installeren.</disclaimer>
-    <description lang="it_IT">Netflix Addon servizi VOD</description>
-    <disclaimer lang="it_IT">Alcune parti di questo addon potrebbero non essere legali nel proprio paese di residenza - si prega di verificare le leggi locali prima dell'installazione.</disclaimer>
-    <assets>
-      <icon>resources/media/icon.png</icon>
-      <fanart>resources/media/fanart.jpg</fanart>
-      <screenshot>resources/media/screenshot-01.jpg</screenshot>
-      <screenshot>resources/media/screenshot-02.jpg</screenshot>
-      <screenshot>resources/media/screenshot-03.jpg</screenshot>
-    </assets>
-    <language>en de es he hr it nl pl pt sk sv</language>
-    <platform>all</platform>
-    <license>MIT</license>
-    <website>https://www.netflix.com</website>
-    <email />
-    <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
-    <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
-    <news>
-v0.15.5 (2019-10-12)
--Speedup loading lists due to the new login validity check
--Cookies expires are now used to check a valid login
--Fixed an issue introduced with previous version causing login error
--Fixed double handshake request on first run
-
-v0.15.4 (2019-10-11)
--Added InputStream Helper settings in settings menu
--Fixed add/remove to mylist on huge lists
--Fixed expired mastertoken key issue
--Fixed skipping sections due to netflix changes
--Manifests now are requested only once
--Updated pt-br, de, es translations
--Minor improvements
-
-v0.15.3 (2019-09-19)
--Initial conversion to python 3
--Initial integration tests
--Implemented device uuid to avoid always asking credentials
--Fixed a problem when library source is special:// or a direct path
--Fixed run library update on slow system like RPI
--Updated dutch language
--Minor fixes
-
-v0.15.2 (2019-08-30)
--Fixed key handshake at addon first run
--Fixed library update service at first run
--Local database now dynamically created by code
--Profile data is not deleted if an problem occurred
--Minor fixes
-
-v0.15.1 (2019-08-25)
--Fixed wrong path to linux systems
-
-v0.15.0 (2019-08-20)
--Implemented data management through database
--Implemented automatic export of new episodes
--Implemented a version upgrade system
--Implemented management of login errors
--Added a new context menu "Export new episodes" for a single tv show
--Added ability to exclude (and re-include) a tv show from library auto update
--Added possibility to share the same library with multiple devices (MySQL server is required)
--No more concurrency and data loss problems of previous "persistent storage"
--Fixed continuous "new access" email notification from netflix
--Fixed locale id error
--Fixed automatic library updates
--Fixed logout now the profiles are no longer accessible and you can enter your credentials
--Fixed exporting tvshow.nfo for a single episode
--Fixed UpNext watched status from Kodi library
--Fixed issue with library items that containing % in the path
--Other minor improvements and fixes
-    </news>
-  </extension>
 </addon></addons>
