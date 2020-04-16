@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.amazon-test"
        name="Amazon VOD"
-       version="0.8.4~beta-20200412"
+       version="0.8.4~beta-20200416"
        provider-name="Sandmann79, Varstahl">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
@@ -35,7 +35,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
     <license>GPL-3.0-or-later</license>
     <assets>
       <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
+      <fanart>fanart.png</fanart>
     </assets>
   </extension>
 </addon>

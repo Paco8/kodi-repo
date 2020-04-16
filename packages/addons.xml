@@ -76,7 +76,7 @@ v0.16.2 (2020-01-07)
 -Minor improvements
     </news>
   </extension>
-</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.8.4~beta-20200412">
+</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.8.4~beta-20200416">
   <requires>
     <import addon="xbmc.python" version="2.24.0" />
     <import addon="script.module.beautifulsoup4" version="4.6.2" />
@@ -108,7 +108,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
     <license>GPL-3.0-or-later</license>
     <assets>
       <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
+      <fanart>fanart.png</fanart>
     </assets>
   </extension>
 </addon><addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.2.0~beta-20200204">
