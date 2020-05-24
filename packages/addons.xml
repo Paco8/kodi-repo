@@ -171,6 +171,30 @@ v.2.2.0
      <screenshot>resources/screen8.png</screenshot>
     </assets>
   </extension>
+</addon><addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.2.9">
+  <requires>
+    <import addon="script.module.slyguy" />
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Disney+ is the exclusive home for your favorite movies and TV shows from Disney, Pixar, Marvel, Star Wars, and National Geographic.
+
+Subscription required.</description>
+    <description lang="it">Disney+ è la casa esclusiva per i tuoi film e programmi TV preferiti di Disney, Pixar, Marvel, Star Wars e National Geographic.
+
+Abbonamento richiesto.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license />
+    <language />
+    <website />
+    <news>Bump required IA versions</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
 </addon><addon id="script.module.pydes" name="pyDes" provider-name="Todd Whiteman" version="2.0.1">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
@@ -221,6 +245,26 @@ v.2.2.0
             <icon>icon.png</icon>
         </assets>
 	</extension>
+</addon><addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.5.6">
+  <requires>
+    
+    
+  </requires>
+  
+  <extension library="resources/modules" point="xbmc.python.module" />
+  <extension library="service.py" point="xbmc.service" start="login" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en" />
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license />
+    <language />
+    <website />
+    <news />
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
 </addon><addon id="repository.paco8" name="Paco8 Repository" provider-name="Paco8" version="1.0.1">
 	<extension name="Paco8 Repository" point="xbmc.addon.repository">
 		<info compressed="false">https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages/addons.xml</info>
