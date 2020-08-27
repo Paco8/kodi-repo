@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.2.9">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.3.6">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -17,7 +17,7 @@ Abbonamento richiesto.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Bump required IA versions</news>
+    <news>Add Play Next Episodes / Movies and Skip Credits</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
