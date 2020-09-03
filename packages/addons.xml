@@ -245,7 +245,7 @@ Abbonamento richiesto.</description>
             <icon>icon.png</icon>
         </assets>
 	</extension>
-</addon><addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.10.4">
+</addon><addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.10.4~mod1">
   <requires>
     
     
