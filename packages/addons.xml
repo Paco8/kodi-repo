@@ -171,7 +171,7 @@ v.2.2.0
      <screenshot>resources/screen8.png</screenshot>
     </assets>
   </extension>
-</addon><addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.3.6">
+</addon><addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.3.7">
   <requires>
     <import addon="script.module.slyguy" />
   </requires>
@@ -245,7 +245,7 @@ Abbonamento richiesto.</description>
             <icon>icon.png</icon>
         </assets>
 	</extension>
-</addon><addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.9.9">
+</addon><addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.10.4">
   <requires>
     
     
