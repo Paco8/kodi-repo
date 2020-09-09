@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.10.4~mod3">
+<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.10.4~mod4">
   <requires>
     <!-- <import addon="xbmc.python" version="2.1.0"/> -->
     <!-- <import addon="repository.slyguy"/> -->
