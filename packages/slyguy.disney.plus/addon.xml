@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.4.1~mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.4.6~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
@@ -17,7 +17,7 @@ Abbonamento richiesto.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix episodes pagination. Add new Sync to Disney setting</news>
+    <news>Update Sync to Disney setting to sync both ways</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>

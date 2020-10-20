@@ -167,7 +167,7 @@ If an official app is available for your platform, use it instead of this.
      <screenshot>resources/screen3.jpg</screenshot>
     </assets>
   </extension>
-</addon><addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.4.1~mod1">
+</addon><addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.4.6~mod1">
   <requires>
     <import addon="script.module.slyguy" />
   </requires>
@@ -185,7 +185,7 @@ Abbonamento richiesto.</description>
     <license />
     <language />
     <website />
-    <news>Fix episodes pagination. Add new Sync to Disney setting</news>
+    <news>Update Sync to Disney setting to sync both ways</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -241,7 +241,7 @@ Abbonamento richiesto.</description>
             <icon>icon.png</icon>
         </assets>
 	</extension>
-</addon><addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.11.1~mod1">
+</addon><addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.12.3~mod1">
   <requires>
     
     
