@@ -101,7 +101,7 @@ v1.11.0 (2020-11-14)
 - Others minor fixes
     </news>
   </extension>
-</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.9.0~beta-mod2">
+</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.9.1~beta-mod1">
   <requires>
     <import addon="xbmc.python" version="2.24.0" />
     <import addon="script.module.beautifulsoup4" version="4.6.2" />
@@ -111,6 +111,7 @@ v1.11.0 (2020-11-14)
     <import addon="script.module.requests" version="2.9.1" />
     <import addon="script.module.kodi-six" version="0.0.5" />
     <import addon="script.module.pyautogui" version="0.9.49" />
+    <import addon="script.module.defusedxml" version="0.6.0" />
   </requires>
   <extension library="default.py" point="xbmc.python.pluginsource">
 	<provides>video</provides>
