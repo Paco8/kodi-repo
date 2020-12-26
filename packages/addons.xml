@@ -101,7 +101,7 @@ v1.11.0 (2020-11-14)
 - Others minor fixes
     </news>
   </extension>
-</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.9.1~beta-mod1">
+</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.9.1~beta-mod2">
   <requires>
     <import addon="xbmc.python" version="2.24.0" />
     <import addon="script.module.beautifulsoup4" version="4.6.2" />
