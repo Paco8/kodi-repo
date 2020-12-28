@@ -135,7 +135,7 @@ v1.11.0 (2020-11-14)
       <clearlogo>clearlogo.png</clearlogo>
     </assets>
   </extension>
-</addon><addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.2-mod4">
+</addon><addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.2-mod5">
   <requires>
     <import addon="xbmc.python" version="2.26.0" />
     <import addon="script.module.kodi-six" version="0.1.0" />
@@ -269,7 +269,7 @@ Abbonamento richiesto.</description>
             <icon>icon.png</icon>
         </assets>
 	</extension>
-</addon><addon id="script.module.xml2ssa" name="Xml2Ssa" provider-name="Paco8" version="0.1.0">
+</addon><addon id="script.module.xml2ssa" name="Xml2Ssa" provider-name="Paco8" version="0.1.1">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.defusedxml" version="0.6.0" />
