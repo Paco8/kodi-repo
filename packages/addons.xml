@@ -195,6 +195,23 @@ If an official app is available for your platform, use it instead of this.
      <screenshot>resources/screen3.jpg</screenshot>
     </assets>
   </extension>
+</addon><addon id="script.module.xml2ssa" name="Xml2Ssa" provider-name="Paco8" version="0.1.2">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0" />
+		<import addon="script.module.defusedxml" version="0.6.0" />
+	</requires>
+	<extension library="resources/lib" point="xbmc.python.module" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Xml2Ssa</summary>
+		<description lang="en_GB">Xml2Ssa</description>
+		<platform>all</platform>
+		<license />
+		<website />
+		<source />
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
 </addon><addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.4.6~mod3">
   <requires>
     <import addon="script.module.slyguy" />
@@ -268,23 +285,6 @@ Abbonamento richiesto.</description>
         <assets>
             <icon>icon.png</icon>
         </assets>
-	</extension>
-</addon><addon id="script.module.xml2ssa" name="Xml2Ssa" provider-name="Paco8" version="0.1.1">
-	<requires>
-		<import addon="xbmc.python" version="2.25.0" />
-		<import addon="script.module.defusedxml" version="0.6.0" />
-	</requires>
-	<extension library="resources/lib" point="xbmc.python.module" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Xml2Ssa</summary>
-		<description lang="en_GB">Xml2Ssa</description>
-		<platform>all</platform>
-		<license />
-		<website />
-		<source />
-		<assets>
-			<icon>icon.png</icon>
-		</assets>
 	</extension>
 </addon><addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.12.3~mod3">
   <requires>
