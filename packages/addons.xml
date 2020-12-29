@@ -195,15 +195,15 @@ If an official app is available for your platform, use it instead of this.
      <screenshot>resources/screen3.jpg</screenshot>
     </assets>
   </extension>
-</addon><addon id="script.module.xml2ssa" name="Xml2Ssa" provider-name="Paco8" version="0.1.2">
+</addon><addon id="script.module.ttml2ssa" name="Ttml2Ssa" provider-name="Paco8" version="0.1.2">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.defusedxml" version="0.6.0" />
 	</requires>
 	<extension library="resources/lib" point="xbmc.python.module" />
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Xml2Ssa</summary>
-		<description lang="en_GB">Xml2Ssa</description>
+		<summary lang="en_GB">Ttml2Ssa</summary>
+		<description lang="en_GB">Ttml2Ssa</description>
 		<platform>all</platform>
 		<license />
 		<website />

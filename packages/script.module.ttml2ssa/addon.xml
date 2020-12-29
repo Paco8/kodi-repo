@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon	id="script.module.xml2ssa"
-		name="Xml2Ssa"
+<addon	id="script.module.ttml2ssa"
+		name="Ttml2Ssa"
 		version="0.1.2"
 		provider-name="Paco8">
 	<requires>
@@ -10,8 +10,8 @@
 	<extension
 		point="xbmc.python.module" library="resources/lib" />
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Xml2Ssa</summary>
-		<description lang="en_GB">Xml2Ssa</description>
+		<summary lang="en_GB">Ttml2Ssa</summary>
+		<description lang="en_GB">Ttml2Ssa</description>
 		<platform>all</platform>
 		<license></license>
 		<website></website>
