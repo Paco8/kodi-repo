@@ -1,17 +1,119 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.netflix" name="Netflix" provider-name="libdev + jojo + asciidisco + caphm + castagnait" version="1.12.0~mod0">
+<addons>
+
+<addon id="plugin.video.amazon-test"
+       name="Amazon VOD"
+       version="0.9.1~beta-mod4"
+       provider-name="Sandmann79, Varstahl">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.6.3"/>
+    <import addon="script.module.mechanicalsoup" version="0.12.0"/>
+    <import addon="script.module.pyxbmct" version="1.3.1"/>
+    <import addon="script.module.inputstreamhelper" version="0.4.4"/>
+    <import addon="script.module.requests" version="2.22.0"/>
+    <import addon="script.module.kodi-six" version="0.1.3.1"/>
+    <import addon="script.module.ttml2ssa" version="0.1.2" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+	<provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_GB">Amazon Prime Video Streaming</summary>
+    <summary lang="de_DE">Amazon Prime Instant Video</summary>
+    <description lang="en_GB">Movies and Television Shows for Prime Members</description>
+    <description lang="de_DE">Filme und Serien für Amazon Prime Mitglieder</description>
+    <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <disclaimer lang="de_DE">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
+    <forum>http://www.kodinerds.net/index.php/Thread/44211-Release-Amazon-Prime-Instant-Video</forum>
+    <source>https://github.com/Sandmann79/xbmc</source>
+    <license>GPL-3.0-or-later</license>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.png</fanart>
+      <clearlogo>clearlogo.png</clearlogo>
+    </assets>
+  </extension>
+</addon>
+<addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.3~mod7">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.addon.signals" version="0.0.6" />
-    <import addon="script.module.inputstreamhelper" version="0.4.4" />
-    <import addon="script.module.pycryptodome" version="3.4.3" />
-    <import addon="script.module.requests" version="2.22.0" />
-    <import addon="script.module.myconnpy" version="8.0.18" /> 
+    <import addon="script.module.kodi-six" version="0.1.0" />
+    <import addon="script.module.requests" version="2.12.4" />
+    <import addon="script.module.pyaes" version="1.6.1" />
+    <import addon="script.module.defusedxml" version="0.6.0" />
+    <import addon="script.module.dateutil" version="2.8.1" />
+    <import addon="script.module.inputstreamhelper" version="0.5.2" />
+    <import addon="script.module.ttml2ssa" version="0.1.2" />
   </requires>
-  <extension library="addon.py" point="xbmc.python.pluginsource">
+  <extension library="main.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
   </extension>
-  <extension library="service.py" point="xbmc.service" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Watch HBO® GO EU+Nordic content in Kodi. Valid HBO® account required.</summary>
+    <description lang="en_GB">
+Simple, Kodi add-on to access HBO® Go EU content. (This add-on is not officially commissioned/supported by HBO®.)
+
+Important, HBO® Go must be paid for!!!  You need a valid account!
+Register on the official HBO® Go website for your region.
+
+Read the disclaimer!
+
+Curently support: Bosnia and Herzegovina, Bulgaria, Croatia, Czech Republic, Hungary, Macedonia, Montenegro, Polonia, Portugal, Romania, Serbia, Slovakia, Slovenija, Spain, Norway, Denmark, Sweden, Finland
+
+To report bugs or request assistence with the add-on go to: https://github.com/arvvoid/plugin.video.hbogoeu
+    </description>
+    <disclaimer lang="en_GB">
+This add-on is not officially commissioned/supported by HBO®. The trademark HBO® Go is registered by Home Box Office, Inc. 
+For more information on HBO® Go visit the official HBO® Go website for your region.
+I do not own any of the content this add-on lists. The content belongs to Home Box Office, Inc. 
+All this add-on does is make simple HTTP requests to Hbo go servers to retrieve and display content just like any web browser would do!
+
+Important: HBO® Go must be paid for!!! You need a valid HBO® Go account for the add-on to work! Register on the official HBO® Go website for your region
+
+THERE IS NO WARRANTY FOR THE ADD-ON, IT MIGHT NOT WORK AT ALL AND IT CAN BREAK AND STOP WORKING AT ANY TIME.
+
+If an official app is available for your platform, use it instead of this.
+    </disclaimer>
+    <language>en bs bg hr cs hu mk pl pt ro sr sk sl es nb da sv fi cnr</language>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=339798</forum>
+    <source>https://github.com/arvvoid/plugin.video.hbogoeu</source>
+    <website>https://arvvoid.github.io/plugin.video.hbogoeu</website>
+    <news>
+- Subtitle cache autocleaning and manual subtitle cache cleaning
+- Translations updates
+- Optimize plot (show only "abstract" or "description")
+- Move from deprecated xbmc.translatePath to new xbmcvfs.translatePath for Kodi 19+
+    </news>
+    <assets>
+     <icon>resources/icon.png</icon>
+     <fanart>resources/fanart.jpg</fanart>
+     <screenshot>resources/screen1.jpg</screenshot>
+     <screenshot>resources/screen2.jpg</screenshot>
+     <screenshot>resources/screen3.jpg</screenshot>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.netflix" name="Netflix" version="1.12.0~mod0" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.addon.signals" version="0.0.6"/>
+    <import addon="script.module.inputstreamhelper" version="0.4.4"/>
+    <import addon="script.module.pycryptodome" version="3.4.3"/>
+    <import addon="script.module.requests" version="2.22.0"/>
+    <import addon="script.module.myconnpy" version="8.0.18"/> <!--MySQL Connector/Python-->
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py"/>
   <extension point="xbmc.addon.metadata">
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <summary lang="cs_CZ">Netflix</summary>
@@ -83,13 +185,13 @@
     <platform>all</platform>
     <license>MIT</license>
     <website>https://www.netflix.com</website>
-    <email />
+    <email></email>
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
 v1.12.0 (2020-12-13)
-- &gt;&gt; END OF THE ADD-ON DEVELOPMENT ON KODI 18.x
-- &gt;&gt; ON KODI 18.x THE ADD-ON WILL RECEIVE ONLY BUG FIX OR MINOR CHANGES
+- >> END OF THE ADD-ON DEVELOPMENT ON KODI 18.x
+- >> ON KODI 18.x THE ADD-ON WILL RECEIVE ONLY BUG FIX OR MINOR CHANGES
 - Add more options to force Widevine L3 (android)
 - Improved errors messages to resolve:
   - This title is not available to watch instantly
@@ -105,121 +207,118 @@ v1.12.0 (2020-12-13)
 - Updated translations it, de, gr, pt-br, hu, ro, es, jp, kr, fr
     </news>
   </extension>
-</addon><addon id="plugin.video.amazon-test" name="Amazon VOD" provider-name="Sandmann79, Varstahl" version="0.9.1~beta-mod4">
+</addon>
+
+<addon id="repository.paco8" name="Paco8 Repository" version="1.1.0" provider-name="Paco8">
+	<extension point="xbmc.addon.repository" name="Paco8 Repository">
+		<info compressed="false">https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages-kodi-19/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages-kodi-19/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages-kodi-19</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Test Repo</summary>
+		<description></description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.module.mechanicalsoup"
+	name="MechanicalSoup"
+	version="0.12.0"
+	provider-name="Matthew Hickford, Dan Hemberger, Matthieu Moy">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.requests" version="2.22.0"/>
+		<import addon="script.module.beautifulsoup4" version="4.6.3"/>
+		<import addon="script.module.six" version="1.14.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">A Python library for automating interaction with websites.</summary>
+		<forum></forum>
+		<website>https://mechanicalsoup.readthedocs.io/</website>
+		<license>MIT</license>
+		<platform>all</platform>
+		<source>https://github.com/MechanicalSoup/MechanicalSoup</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+	</extension>
+</addon>
+
+<addon id="script.module.pyautogui"
+	name="PyAutoGUI"
+	version="0.9.50"
+	provider-name="Al Sweigart">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">PyAutoGUI is a cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse and keyboard.</summary>
+		<forum></forum>
+		<website>https://pyautogui.readthedocs.io/</website>
+		<license>see LICENSE.txt</license>
+		<platform>all</platform>
+		<source>https://github.com/asweigart/pyautogui</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+	</extension>
+</addon>
+
+<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.12.3~mod3">
   <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.beautifulsoup4" version="4.6.3" />
-    <import addon="script.module.mechanicalsoup" version="0.12.0" />
-    <import addon="script.module.pyxbmct" version="1.3.1" />
-    <import addon="script.module.inputstreamhelper" version="0.4.4" />
-    <import addon="script.module.requests" version="2.22.0" />
-    <import addon="script.module.kodi-six" version="0.1.3.1" />
-    <import addon="script.module.ttml2ssa" version="0.1.2" />
+    <import addon="xbmc.python" version="3.0.0"/>
+    <!-- <import addon="repository.slyguy"/> -->
   </requires>
-  <extension library="default.py" point="xbmc.python.pluginsource">
-	<provides>video</provides>
-  </extension>
-  <extension library="service.py" point="xbmc.service" start="startup" />
+  <!-- <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension> -->
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
+    <description lang="en"></description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
-    <summary lang="en_GB">Amazon Prime Video Streaming</summary>
-    <summary lang="de_DE">Amazon Prime Instant Video</summary>
-    <description lang="en_GB">Movies and Television Shows for Prime Members</description>
-    <description lang="de_DE">Filme und Serien für Amazon Prime Mitglieder</description>
-    <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
-    <disclaimer lang="de_DE">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
-    <forum>http://www.kodinerds.net/index.php/Thread/44211-Release-Amazon-Prime-Instant-Video</forum>
-    <source>https://github.com/Sandmann79/xbmc</source>
-    <license>GPL-3.0-or-later</license>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news></news>
     <assets>
       <icon>icon.png</icon>
-      <fanart>fanart.png</fanart>
-      <clearlogo>clearlogo.png</clearlogo>
+      <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
-</addon><addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.2-mod6">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0" />
-    <import addon="script.module.kodi-six" version="0.1.0" />
-    <import addon="script.module.requests" version="2.12.4" />
-    <import addon="script.module.pyaes" version="1.6.1" />
-    <import addon="script.module.defusedxml" version="0.6.0" />
-    <import addon="script.module.dateutil" version="2.8.1" />
-    <import addon="script.module.inputstreamhelper" version="0.5.2" />
-    <import addon="script.module.ttml2ssa" version="0.1.2" />
-  </requires>
-  <extension library="main.py" point="xbmc.python.pluginsource">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Watch HBO® GO EU+Nordic content in Kodi. Valid HBO® account required.</summary>
-    <description lang="en_GB">
-Simple, Kodi add-on to access HBO® Go EU content. (This add-on is not officially commissioned/supported by HBO®.)
-
-Important, HBO® Go must be paid for!!!  You need a valid account!
-Register on the official HBO® Go website for your region.
-
-Read the disclaimer!
-
-Curently support: Bosnia and Herzegovina, Bulgaria, Croatia, Czech Republic, Hungary, Macedonia, Montenegro, Polonia, Portugal, Romania, Serbia, Slovakia, Slovenija, Spain, Norway, Denmark, Sweden, Finland
-
-To report bugs or request assistence with the add-on go to: https://github.com/arvvoid/plugin.video.hbogoeu
-    </description>
-    <disclaimer lang="en_GB">
-This add-on is not officially commissioned/supported by HBO®. The trademark HBO® Go is registered by Home Box Office, Inc. 
-For more information on HBO® Go visit the official HBO® Go website for your region.
-I do not own any of the content this add-on lists. The content belongs to Home Box Office, Inc. 
-All this add-on does is make simple HTTP requests to Hbo go servers to retrieve and display content just like any web browser would do!
-
-Important: HBO® Go must be paid for!!! You need a valid HBO® Go account for the add-on to work! Register on the official HBO® Go website for your region
-
-THERE IS NO WARRANTY FOR THE ADD-ON, IT MIGHT NOT WORK AT ALL AND IT CAN BREAK AND STOP WORKING AT ANY TIME.
-
-If an official app is available for your platform, use it instead of this.
-    </disclaimer>
-    <language>en bs bg hr cs hu mk pl pt ro sr sk sl es nb da sv fi cnr</language>
-    <platform>all</platform>
-    <license>GPL-2.0-or-later</license>
-    <forum>https://forum.kodi.tv/showthread.php?tid=339798</forum>
-    <source>https://github.com/arvvoid/plugin.video.hbogoeu</source>
-    <website>https://arvvoid.github.io/plugin.video.hbogoeu</website>
-    <news>
-- Subtitle cache autocleaning and manual subtitle cache cleaning
-- Translations updates
-- Optimize plot (show only "abstract" or "description")
-- Move from deprecated xbmc.translatePath to new xbmcvfs.translatePath for Kodi 19+
-    </news>
-    <assets>
-     <icon>resources/icon.png</icon>
-     <fanart>resources/fanart.jpg</fanart>
-     <screenshot>resources/screen1.jpg</screenshot>
-     <screenshot>resources/screen2.jpg</screenshot>
-     <screenshot>resources/screen3.jpg</screenshot>
-    </assets>
-  </extension>
-</addon><addon id="script.module.ttml2ssa" name="Ttml2Ssa" provider-name="Paco8" version="0.1.4">
+</addon>
+<addon	id="script.module.ttml2ssa"
+		name="Ttml2Ssa"
+		version="0.1.4"
+		provider-name="Paco8">
 	<requires>
-		 
+		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.defusedxml" version="0.6.0" />
 	</requires>
-	<extension library="resources/lib" point="xbmc.python.module" />
+	<extension
+		point="xbmc.python.module" library="resources/lib" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Ttml2Ssa Library.</summary>
 		<description lang="en_GB">Ttml2Ssa is a library that allows other addons to convert TTML/XML/DFXP subtitles to SRT and SSA/ASS formats.</description>
 		<platform>all</platform>
 		<license>The Unlicense</license>
-		<website />
-		<source />
+		<website></website>
+		<source></source>
 		<assets>
 			<icon>icon.png</icon>
 		</assets>
 	</extension>
-</addon><addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.4.6~mod3">
+</addon>
+
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.4.6~mod3">
   <requires>
-    <import addon="script.module.slyguy" />
+    <import addon="script.module.slyguy"/>
   </requires>
-  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
@@ -230,80 +329,14 @@ Subscription required.</description>
 
 Abbonamento richiesto.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
-    <license />
-    <language />
-    <website />
+    <license></license>
+    <language></language>
+    <website></website>
     <news>Update Sync to Disney setting to sync both ways</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
-</addon><addon id="script.module.mechanicalsoup" name="MechanicalSoup" provider-name="Matthew Hickford, Dan Hemberger, Matthieu Moy" version="0.12.0">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0" />
-		<import addon="script.module.requests" version="2.22.0" />
-		<import addon="script.module.beautifulsoup4" version="4.6.3" />
-		<import addon="script.module.six" version="1.14.0" />
-	</requires>
-	<extension library="lib" point="xbmc.python.module" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">A Python library for automating interaction with websites.</summary>
-		<forum />
-		<website>https://mechanicalsoup.readthedocs.io/</website>
-		<license>MIT</license>
-		<platform>all</platform>
-		<source>https://github.com/MechanicalSoup/MechanicalSoup</source>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-	</extension>
-</addon><addon id="script.module.pyautogui" name="PyAutoGUI" provider-name="Al Sweigart" version="0.9.50">
-	<requires>
-		<import addon="xbmc.python" version="3.0.0" />
-	</requires>
-	<extension library="lib" point="xbmc.python.module" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">PyAutoGUI is a cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse and keyboard.</summary>
-		<forum />
-		<website>https://pyautogui.readthedocs.io/</website>
-		<license>see LICENSE.txt</license>
-		<platform>all</platform>
-		<source>https://github.com/asweigart/pyautogui</source>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
-	</extension>
-</addon><addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.12.3~mod3">
-  <requires>
-    
-    
-  </requires>
-  
-  <extension library="resources/modules" point="xbmc.python.module" />
-  <extension library="service.py" point="xbmc.service" start="login" />
-  <extension point="xbmc.addon.metadata">
-    <description lang="en" />
-    <reuselanguageinvoker>true</reuselanguageinvoker>
-    <license />
-    <language />
-    <website />
-    <news />
-    <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon><addon id="repository.paco8" name="Paco8 Repository" provider-name="Paco8" version="1.1.0">
-	<extension name="Paco8 Repository" point="xbmc.addon.repository">
-		<info compressed="false">https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages-kodi-19/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages-kodi-19/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages-kodi-19</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Test Repo</summary>
-		<description />
-		<disclaimer />
-		<platform>all</platform>
-	</extension>
-</addon></addons>
+</addon>
+</addons>
