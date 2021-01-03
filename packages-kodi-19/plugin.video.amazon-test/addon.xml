@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.amazon-test"
        name="Amazon VOD"
-       version="0.9.1~beta-mod4"
+       version="0.9.1~beta-mod5"
        provider-name="Sandmann79, Varstahl">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -11,7 +11,7 @@
     <import addon="script.module.inputstreamhelper" version="0.4.4"/>
     <import addon="script.module.requests" version="2.22.0"/>
     <import addon="script.module.kodi-six" version="0.1.3.1"/>
-    <import addon="script.module.ttml2ssa" version="0.1.2" />
+    <import addon="script.module.ttml2ssa" version="0.1.6" />
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">

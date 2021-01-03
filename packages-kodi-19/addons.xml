@@ -3,7 +3,7 @@
 
 <addon id="plugin.video.amazon-test"
        name="Amazon VOD"
-       version="0.9.1~beta-mod4"
+       version="0.9.1~beta-mod5"
        provider-name="Sandmann79, Varstahl">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -13,7 +13,7 @@
     <import addon="script.module.inputstreamhelper" version="0.4.4"/>
     <import addon="script.module.requests" version="2.22.0"/>
     <import addon="script.module.kodi-six" version="0.1.3.1"/>
-    <import addon="script.module.ttml2ssa" version="0.1.2" />
+    <import addon="script.module.ttml2ssa" version="0.1.6" />
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -39,7 +39,7 @@
     </assets>
   </extension>
 </addon>
-<addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.3~mod7">
+<addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.3~mod8">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.kodi-six" version="0.1.0" />
@@ -48,7 +48,7 @@
     <import addon="script.module.defusedxml" version="0.6.0" />
     <import addon="script.module.dateutil" version="2.8.1" />
     <import addon="script.module.inputstreamhelper" version="0.5.2" />
-    <import addon="script.module.ttml2ssa" version="0.1.2" />
+    <import addon="script.module.ttml2ssa" version="0.1.6" />
   </requires>
   <extension library="main.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
@@ -101,7 +101,7 @@ If an official app is available for your platform, use it instead of this.
   </extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="1.12.0~mod0" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.13.0~mod0" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.addon.signals" version="0.0.6"/>
@@ -189,22 +189,15 @@ If an official app is available for your platform, use it instead of this.
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v1.12.0 (2020-12-13)
-- >> END OF THE ADD-ON DEVELOPMENT ON KODI 18.x
-- >> ON KODI 18.x THE ADD-ON WILL RECEIVE ONLY BUG FIX OR MINOR CHANGES
-- Add more options to force Widevine L3 (android)
-- Improved errors messages to resolve:
-  - This title is not available to watch instantly
-  - Request failed validation during key exchange
-- Reverted "reworked Audio/Subtitles language features" on Kodi 18
-- Fix missing default audio track for impaired (Kodi 19)
-- Fixed "Prefer audio/subtitles language with country code" (Kodi 19)
-- Parental control moved to profiles list context menu
-- Fixed ESN generation with modelgroup
-- Fixed build_media_tag exception due to video pause
-- Blocked profile switching while playing, can cause issues
-- Managed wrong password case on login that caused http error 500
-- Updated translations it, de, gr, pt-br, hu, ro, es, jp, kr, fr
+v1.13.0 (2021-01-02)
+- Add new ESN/Widevine setting dialog
+- MySQL Connector/Python library is now a Kodi dependency
+- Removed all Python 2 code / Kodi 18 compatibility
+- Fixed an issue that not allow to use same profile to play videos with UpNext
+- Disabled UpNext when play STRM of a shared path (Wiki: Share STRM library with multiple devices - OPTION 2)
+- Minor code fixes/improvements
+- Add Taiwan transation
+- Updated translations it, de, es, jp, kr, ro
     </news>
   </extension>
 </addon>
@@ -293,7 +286,7 @@ v1.12.0 (2020-12-13)
 </addon>
 <addon	id="script.module.ttml2ssa"
 		name="Ttml2Ssa"
-		version="0.1.4"
+		version="0.1.6"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
