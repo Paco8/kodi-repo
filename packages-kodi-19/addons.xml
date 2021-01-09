@@ -3,7 +3,7 @@
 
 <addon id="plugin.video.amazon-test"
        name="Amazon VOD"
-       version="0.9.1~beta-mod5"
+       version="0.9.1~beta-mod7"
        provider-name="Sandmann79, Varstahl">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -13,7 +13,7 @@
     <import addon="script.module.inputstreamhelper" version="0.4.4"/>
     <import addon="script.module.requests" version="2.22.0"/>
     <import addon="script.module.kodi-six" version="0.1.3.1"/>
-    <import addon="script.module.ttml2ssa" version="0.1.6" />
+    <import addon="script.module.ttml2ssa" version="0.1.9" />
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -39,7 +39,7 @@
     </assets>
   </extension>
 </addon>
-<addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.3~mod8">
+<addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.3~mod10">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.kodi-six" version="0.1.0" />
@@ -48,7 +48,7 @@
     <import addon="script.module.defusedxml" version="0.6.0" />
     <import addon="script.module.dateutil" version="2.8.1" />
     <import addon="script.module.inputstreamhelper" version="0.5.2" />
-    <import addon="script.module.ttml2ssa" version="0.1.6" />
+    <import addon="script.module.ttml2ssa" version="0.1.9" />
   </requires>
   <extension library="main.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
@@ -286,7 +286,7 @@ v1.13.0 (2021-01-02)
 </addon>
 <addon	id="script.module.ttml2ssa"
 		name="Ttml2Ssa"
-		version="0.1.6"
+		version="0.1.9"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -296,11 +296,11 @@ v1.13.0 (2021-01-02)
 		point="xbmc.python.module" library="resources/lib" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Ttml2Ssa Library.</summary>
-		<description lang="en_GB">Ttml2Ssa is a library that allows other addons to convert TTML/XML/DFXP subtitles to SRT and SSA/ASS formats.</description>
+		<description lang="en_GB">Ttml2Ssa is a library that allows other addons to convert TTML/XML/DFXP/VTT/SRT subtitles to SRT and SSA/ASS formats.</description>
 		<platform>all</platform>
 		<license>The Unlicense</license>
-		<website></website>
-		<source></source>
+		<website>https://github.com/Paco8/ttml2ssa</website>
+		<source>https://github.com/Paco8/ttml2ssa</source>
 		<assets>
 			<icon>icon.png</icon>
 		</assets>
