@@ -3,7 +3,7 @@
 
 <addon id="plugin.video.amazon-test"
        name="Amazon VOD"
-       version="0.9.1~beta-mod7"
+       version="0.9.1~beta-mod8"
        provider-name="Sandmann79, Varstahl">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -13,7 +13,7 @@
     <import addon="script.module.inputstreamhelper" version="0.4.4"/>
     <import addon="script.module.requests" version="2.22.0"/>
     <import addon="script.module.kodi-six" version="0.1.3.1"/>
-    <import addon="script.module.ttml2ssa" version="0.1.9" />
+    <import addon="script.module.ttml2ssa" version="0.1.16" />
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -39,7 +39,7 @@
     </assets>
   </extension>
 </addon>
-<addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.3~mod10">
+<addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.3~mod11">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.kodi-six" version="0.1.0" />
@@ -48,7 +48,7 @@
     <import addon="script.module.defusedxml" version="0.6.0" />
     <import addon="script.module.dateutil" version="2.8.1" />
     <import addon="script.module.inputstreamhelper" version="0.5.2" />
-    <import addon="script.module.ttml2ssa" version="0.1.9" />
+    <import addon="script.module.ttml2ssa" version="0.1.16" />
   </requires>
   <extension library="main.py" point="xbmc.python.pluginsource">
     <provides>video</provides>
