@@ -255,7 +255,7 @@ v1.12.1 (2021-01-02)
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.19.1~mod2">
+<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.19.1~mod3">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <!-- <import addon="repository.slyguy"/> -->
