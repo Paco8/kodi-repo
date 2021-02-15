@@ -3,7 +3,7 @@
 
 <addon id="plugin.video.amazon-test"
        name="Amazon VOD"
-       version="0.9.1~beta-mod8"
+       version="0.9.1~beta-mod9"
        provider-name="Sandmann79, Varstahl">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -39,7 +39,7 @@
     </assets>
   </extension>
 </addon>
-<addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.3~mod11">
+<addon id="plugin.video.hbogoeu" name="hGO EU" provider-name="arvvoid" version="2.6.4~mod12">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.kodi-six" version="0.1.0" />
