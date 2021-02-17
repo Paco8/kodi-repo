@@ -280,12 +280,15 @@ v1.12.1 (2021-01-02)
 </addon>
 <addon	id="script.module.ttml2ssa"
 		name="Ttml2Ssa"
-		version="0.2.1"
+		version="0.2.2"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0"/>
 		<import addon="script.module.defusedxml" version="0.6.0" />
 	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
 	<extension
 		point="xbmc.python.module" library="resources/lib" />
 	<extension point="xbmc.addon.metadata">
