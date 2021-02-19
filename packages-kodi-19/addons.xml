@@ -266,6 +266,7 @@ v1.13.1 (2021-01-25)
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <!-- <import addon="repository.slyguy"/> -->
+    <import addon="script.module.ttml2ssa" version="0.2.3" />
   </requires>
   <!-- <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
@@ -287,7 +288,7 @@ v1.13.1 (2021-01-25)
 </addon>
 <addon	id="script.module.ttml2ssa"
 		name="Ttml2Ssa"
-		version="0.2.2"
+		version="0.2.3"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -311,9 +312,10 @@ v1.13.1 (2021-01-25)
 	</extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.5.5~mod2">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.5.5~mod3">
   <requires>
     <import addon="script.module.slyguy"/>
+    <import addon="script.module.ttml2ssa" version="0.2.3" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>

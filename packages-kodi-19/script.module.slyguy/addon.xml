@@ -3,6 +3,7 @@
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <!-- <import addon="repository.slyguy"/> -->
+    <import addon="script.module.ttml2ssa" version="0.2.3" />
   </requires>
   <!-- <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
