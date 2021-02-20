@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.19.1~mod4">
+<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.19.1~mod5">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <!-- <import addon="repository.slyguy"/> -->
-    <import addon="script.module.ttml2ssa" version="0.2.3" />
+    <import addon="script.module.ttml2ssa" version="0.2.4" />
   </requires>
   <!-- <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
