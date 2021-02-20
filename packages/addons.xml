@@ -255,11 +255,11 @@ v1.12.1 (2021-01-02)
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.19.1~mod4">
+<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.19.1~mod5">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <!-- <import addon="repository.slyguy"/> -->
-    <import addon="script.module.ttml2ssa" version="0.2.3" />
+    <import addon="script.module.ttml2ssa" version="0.2.4" />
   </requires>
   <!-- <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
@@ -281,7 +281,7 @@ v1.12.1 (2021-01-02)
 </addon>
 <addon	id="script.module.ttml2ssa"
 		name="Ttml2Ssa"
-		version="0.2.3"
+		version="0.2.4"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0"/>
