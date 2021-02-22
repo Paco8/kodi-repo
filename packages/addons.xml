@@ -281,7 +281,7 @@ v1.12.1 (2021-01-02)
 </addon>
 <addon	id="script.module.ttml2ssa"
 		name="Ttml2Ssa"
-		version="0.2.5"
+		version="0.2.6"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0"/>
