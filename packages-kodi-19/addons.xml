@@ -262,7 +262,7 @@ v1.13.1 (2021-01-25)
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.19.1~mod7">
+<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.21.5~mod1">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <!-- <import addon="repository.slyguy"/> -->
@@ -279,7 +279,7 @@ v1.13.1 (2021-01-25)
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Brand new Proxy Quality control method</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -288,7 +288,7 @@ v1.13.1 (2021-01-25)
 </addon>
 <addon	id="script.module.ttml2ssa"
 		name="Ttml2Ssa"
-		version="0.2.6"
+		version="0.2.7"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -312,7 +312,7 @@ v1.13.1 (2021-01-25)
 	</extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.5.5~mod4">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.6.0~mod4">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.2.3" />
@@ -331,7 +331,7 @@ Abbonamento richiesto.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Happy Holidays!</news>
+    <news>Add Hubs folder</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
