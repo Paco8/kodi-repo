@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.5.5~mod4">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.6.0~mod4">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.2.3" />
@@ -18,7 +18,7 @@ Abbonamento richiesto.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Happy Holidays!</news>
+    <news>Add Hubs folder</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
