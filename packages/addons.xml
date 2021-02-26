@@ -255,7 +255,7 @@ v1.12.1 (2021-01-02)
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.21.5~mod2">
+<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.21.6~mod1">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <!-- <import addon="repository.slyguy"/> -->
@@ -305,7 +305,7 @@ v1.12.1 (2021-01-02)
 	</extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.6.0~mod5">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.6.1~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.2.3" />
