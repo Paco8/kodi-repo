@@ -102,7 +102,7 @@ If an official app is available for your platform, use it instead of this.
   </extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="1.12.1~mod8" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.12.3~mod1" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.addon.signals" version="0.0.3"/>
@@ -189,9 +189,9 @@ If an official app is available for your platform, use it instead of this.
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v1.12.1 (2021-01-02)
-- Fixed an issue that not allow to use same profile to play videos with UpNext
-- Disabled UpNext when play STRM of a shared path (Wiki: Share STRM library with multiple devices - OPTION 2)
+v1.12.3 (2021-02-21)
+- Fixed HTTP ReadTimeout/ConnectionError errors
+- Fixed incorrect handling of MSL errors
     </news>
   </extension>
 </addon>
