@@ -101,7 +101,7 @@ If an official app is available for your platform, use it instead of this.
   </extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="1.13.1~mod3" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.14.1~mod1" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.addon.signals" version="0.0.6+matrix.1"/>
@@ -190,15 +190,9 @@ If an official app is available for your platform, use it instead of this.
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v1.13.1 (2021-01-25)
-- Add images to seasons list items
-- Implemented support to Kodi language setting case "User interface language"
-- Fixed "Prefer the audio/subtitle language with country code" feature
-- Fixed possible dependencies errors on new installations
-- Fixed possible service crash on slower devices like RPI
-- Better managed data chunks in some cases could cause errors on starting playback
-- Tried to better handle HTTP ReadTimeout/ConnectionError errors
-- Updated translations fr, hu, pt-br, zh-cn
+v1.14.1 (2021-02-25)
+- Fixed error caused by installation from scratch
+- Update translations pt_br, zh,tw, ro, fr, zh_cn, jp, kr, gl_es, hu
     </news>
   </extension>
 </addon>
