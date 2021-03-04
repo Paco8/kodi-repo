@@ -281,7 +281,7 @@ v1.12.3 (2021-02-21)
 </addon>
 <addon	id="script.module.ttml2ssa"
 		name="Improved Subtitles"
-		version="0.2.10"
+		version="0.2.11"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0"/>
@@ -301,6 +301,7 @@ v1.12.3 (2021-02-21)
 		<source>https://github.com/Paco8/ttml2ssa</source>
 		<assets>
 			<icon>icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
 			<screenshot>resources/screen1.jpg</screenshot>
 			<screenshot>resources/screen2.jpg</screenshot>
 		</assets>
