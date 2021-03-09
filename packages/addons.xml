@@ -281,7 +281,7 @@ v1.12.3 (2021-02-21)
 </addon>
 <addon	id="script.module.ttml2ssa"
 		name="Improved Subtitles"
-		version="0.3.1"
+		version="0.3.2"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0"/>
