@@ -268,7 +268,7 @@ YOU MUST UPDATE YOUR ACCOUNT PARENTAL CONTROL SETTINGS.
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.21.6~mod2">
+<addon id="script.module.slyguy" name="SlyGuy Shared" provider-name="SlyGuy" version="0.27.0~mod1">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <!-- <import addon="repository.slyguy"/> -->
