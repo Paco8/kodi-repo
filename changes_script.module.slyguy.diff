@@ -1,0 +1,153 @@
+diff -urN script.module.slyguy/resources/lib/proxy.py script.module.slyguy-ttml2ssa/resources/lib/proxy.py
+--- script.module.slyguy/resources/lib/proxy.py	2021-05-05 17:23:38.000000000 +0200
++++ script.module.slyguy-ttml2ssa/resources/lib/proxy.py	2021-05-10 13:35:24.000000000 +0200
+@@ -583,6 +583,10 @@
+         original_language = self._session.get('original_language', '').lower().strip()
+         default_language  = self._session.get('default_language', '').lower().strip()
+ 
++        use_ttml2ssa = int(self._session.get('use_ttml2ssa', 0))
++        if use_ttml2ssa:
++            m3u8 = re.sub(r'^#EXT-X-MEDIA:TYPE=SUBTITLES.*?$', '#DELETED', m3u8, flags=re.M)
++
+         if original_language and not default_language:
+             default_language = original_language
+ 
+diff -urN script.module.slyguy/resources/modules/slyguy/gui.py script.module.slyguy-ttml2ssa/resources/modules/slyguy/gui.py
+--- script.module.slyguy/resources/modules/slyguy/gui.py	2021-05-05 17:23:38.000000000 +0200
++++ script.module.slyguy-ttml2ssa/resources/modules/slyguy/gui.py	2021-05-10 13:35:24.000000000 +0200
+@@ -331,7 +331,7 @@
+         else:
+             self.inputstream = None
+ 
+-        def make_sub(url, language='unk', mimetype=''):
++        def make_sub(url, language='unk', mimetype='', extension='srt'):
+             if not url.lower().startswith('http') and not url.lower().startswith('plugin://'):
+                 return url
+ 
+@@ -350,7 +350,7 @@
+                 url = url_for(ROUTE_WEBVTT, url=url)
+                 mimetype = 'text/vtt'
+ 
+-            proxy_url = '{}.srt'.format(language)
++            proxy_url = '{}.{}'.format(language, extension)
+             proxy_data['path_subs'][proxy_url] = url
+ 
+             return u'{}{}'.format(proxy_path, proxy_url)
+@@ -376,6 +376,7 @@
+                 'audio_description': str(int(settings.getBool('audio_description', True))),
+                 'subs_forced': str(int(settings.getBool('subs_forced', True))),
+                 'subs_non_forced': str(int(settings.getBool('subs_non_forced', True))),
++                'use_ttml2ssa': int(settings.getBool('use_ttml2ssa', False)),
+                 'subtitles': [],
+                 'path_subs': {},
+                 'addon_id': ADDON_ID,
+diff -urN script.module.slyguy/resources/modules/slyguy/plugin.py script.module.slyguy-ttml2ssa/resources/modules/slyguy/plugin.py
+--- script.module.slyguy/resources/modules/slyguy/plugin.py	2021-05-05 17:23:38.000000000 +0200
++++ script.module.slyguy-ttml2ssa/resources/modules/slyguy/plugin.py	2021-05-10 13:35:24.000000000 +0200
+@@ -265,6 +265,13 @@
+ @route(ROUTE_WEBVTT)
+ @plugin_callback()
+ def _webvtt(url, _data_path, _headers, **kwargs):
++    if 'ttml2ssa' in url:
++        res = _download_subtitle(url)
++        if res:
++            with open(_data_path, 'wb') as f:
++                f.write(res.encode('utf8'))
++        return _data_path + '|content-type=text/vtt'
++
+     r = Session().get(url, headers=_headers)
+ 
+     data = r.content.decode('utf8')
+@@ -276,6 +283,40 @@
+ 
+     return _data_path + '|content-type=text/vtt'
+ 
++def _download_subtitle(url):
++    import os.path
++    try:
++        # Python 3
++        from urllib.parse import unquote
++    except ImportError:
++        # Python 2
++        from urllib import unquote
++
++    arguments = url.split('/')
++    log.debug('**** arguments: {}'.format(arguments))
++
++    if len(arguments) < 4:
++        return None
++
++    url = unquote(arguments[0])
++    lang = arguments[2]
++    extension = arguments[3]
++    log.debug('**** url: {} lang: {} extension: {}'.format(url, lang, extension))
++
++    from ttml2ssa import Ttml2SsaAddon
++    ttml = Ttml2SsaAddon()
++    vtt, offset = ttml.download_m3u8_disney(url)
++    ttml.subtitle_language = lang
++    ttml.shift = offset
++    ttml.parse_vtt_from_string(vtt)
++
++    if extension == 'ssa':
++        res = ttml.generate_ssa()
++    else:
++        res = ttml.generate_srt()
++
++    return res
++
+ @route(ROUTE_RESET)
+ def _reset(**kwargs):
+     if not gui.yes_no(_.PLUGIN_RESET_YES_NO):
+@@ -431,6 +472,9 @@
+         except:
+             pass
+ 
++        if settings.getBool('use_ttml2ssa', False) and self.inputstream.manifest_type == 'hls':
++            self._add_subtitles()
++
+         if quality is None:
+             quality = settings.getEnum('default_quality', QUALITY_TYPES, default=QUALITY_ASK)
+             if quality == QUALITY_CUSTOM:
+@@ -462,6 +506,41 @@
+         else:
+             xbmc.Player().play(self.path, li)
+ 
++    def _add_subtitles(self):
++        log.debug("***** path: {}".format(self.path))
++        log.debug("***** profile path: {}".format(ADDON_PROFILE))
++
++        from ttml2ssa import Ttml2SsaAddon
++        ttml = Ttml2SsaAddon()
++        subtype = ttml.subtitle_type()
++        language_list = [x.strip().lower() for x in settings.get('subs_whitelist', '').split(',') if x]
++        allow_forced = settings.getBool('subs_forced', True)
++        allow_non_forced = settings.getBool('subs_non_forced', True)
++        log.debug("***** language_list: {}".format(language_list))
++        log.debug("***** allow_forced: {} allow_non_forced: {}".format(allow_forced, allow_non_forced))
++        sub_list = ttml.get_subtitle_list_from_m3u8_url(self.path, language_list, allow_forced, allow_non_forced)
++        log.debug("***** sub_list: {}".format(sub_list))
++
++        self.subtitles = []
++        def append_sub(url, lang, filename, extension, tag=''):
++            try:
++                # Python 3
++                from urllib.parse import quote
++            except ImportError:
++                # Python 2
++                from urllib import quote
++
++            url = "{}/ttml2ssa/{}/{}".format(quote(url, safe=''), lang, extension)
++            self.subtitles.append([url, lang+tag, '', extension])
++
++        for sub in sub_list:
++            if subtype != 'srt':
++                append_sub(sub['url'], sub['lang'], sub['filename'], 'ssa')
++            if subtype != 'ssa':
++                append_sub(sub['url'], sub['lang'], sub['filename'], 'srt', '.SRT' if subtype == 'both' else '')
++
++        log.debug("***** subtitles: {}".format(self.subtitles))
++
+ #Plugin.Folder()
+ class Folder(object):
+     def __init__(self, title=None, items=None, content='videos', updateListing=False, cacheToDisc=True, sort_methods=None, thumb=None, fanart=None, no_items_label=_.NO_ITEMS, no_items_method='dialog'):
