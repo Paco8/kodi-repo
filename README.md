@@ -1,5 +1,7 @@
 # Test repo
-This repo for kodi contains modified versions of the netflix, amazon, hbogoeu and disney+ addons, with support for [ttml2ssa](https://github.com/Paco8/ttml2ssa), which provides better looking and more customizable subtitles.
+This repo for kodi contains modified versions of the netflix, amazon, hbogoeu[*] and disney+ addons, with support for [ttml2ssa](https://github.com/Paco8/ttml2ssa), which provides better looking and more customizable subtitles.
+
+[*] The support for ttml2ssa in hbogoeu is only for Nordic/Spain.
 
 # Installation
 To install this repo in kodi, download and install this package:
