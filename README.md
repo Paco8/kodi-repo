@@ -1,6 +1,12 @@
 # Test repo
 This repo for kodi contains modified versions of the netflix, amazon, hbogoeu and disney+ addons, with support for [ttml2ssa](https://github.com/Paco8/ttml2ssa), which provides better looking and more customizable subtitles.
 
+# Installation
+To install this repo in kodi, download and install this package:
+* Kodi 18: [repository.paco8-1.0.1.zip](https://github.com/Paco8/kodi-repo/raw/master/packages/repository.paco8/repository.paco8-1.0.1.zip)
+* Kodi 19: [repository.paco8-1.1.0.zip](https://github.com/Paco8/kodi-repo/raw/master/packages-kodi-19/repository.paco8/repository.paco8-1.1.0.zip)
+
+# Use of the modified addons
 After installing any of the addons you'll see a new addon:
 
 ![ttml2ssa icon](https://raw.githubusercontent.com/Paco8/ttml2ssa/main/kodi/icon.png)
