@@ -15,3 +15,4 @@ You can configure in it the look of the subtitles and other options:
 * [netflix (matrix)](https://github.com/Paco8/plugin.video.netflix/tree/Matrix-ttml2ssa) [[view changes](https://github.com/Paco8/plugin.video.netflix/compare/Matrix..Matrix-ttml2ssa)]
 * [netflix (leia)](https://github.com/Paco8/plugin.video.netflix/tree/Leia-ttml2ssa) [[view changes](https://github.com/Paco8/plugin.video.netflix/compare/Leia..Leia-ttml2ssa)]
 * [amazon](https://github.com/Paco8/xbmc/tree/ttml2ssa) [[view changes](https://github.com/Paco8/xbmc/compare/master..ttml2ssa)]
+* [disney+] [[changes in slyguy.disney.plus](https://github.com/Paco8/kodi-repo/blob/master/changes_slyguy.disney.plus.diff)] [[changes in script.module.slyguy](https://github.com/Paco8/kodi-repo/blob/master/changes_script.module.slyguy.diff)]
