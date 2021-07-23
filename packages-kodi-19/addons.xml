@@ -265,19 +265,17 @@ YOU MUST UPDATE YOUR ACCOUNT PARENTAL CONTROL SETTINGS.
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.28.8~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.36.5~mod1">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <!-- <import addon="repository.slyguy"/> -->
     <import addon="script.module.ttml2ssa" version="0.2.5" />
   </requires>
   <extension point="xbmc.service" library="service.py" start="login" />
-  <!-- <extension point="xbmc.python.script" library="default.py">
-    <provides>executable</provides>
-  </extension> -->
+  <extension point="xbmc.python.pluginsource" library="default.py" />
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Common code used by all Slyguy add-ons</description>
+    <description lang="en">Common code required by all Slyguy add-ons</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
@@ -319,7 +317,7 @@ YOU MUST UPDATE YOUR ACCOUNT PARENTAL CONTROL SETTINGS.
 	</extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.6.4~mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.7.4~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.2.3" />
@@ -338,7 +336,7 @@ Abbonamento richiesto.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix search</news>
+    <news>Try support new JWE auth tokens</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
