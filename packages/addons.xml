@@ -303,7 +303,7 @@ v1.12.4 (2021-04-02)
 	</extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.7.7~mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.7.9~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.2.3" />
@@ -322,7 +322,7 @@ Abbonamento richiesto.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Migrate to latest Disney API</news>
+    <news>Fix Skip Credits and improve Skip Intro</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
