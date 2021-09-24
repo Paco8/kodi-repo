@@ -265,7 +265,7 @@ YOU MUST UPDATE YOUR ACCOUNT PARENTAL CONTROL SETTINGS.
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.36.7~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.44.0~mod1">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <!-- <import addon="repository.slyguy"/> -->
@@ -317,7 +317,7 @@ YOU MUST UPDATE YOUR ACCOUNT PARENTAL CONTROL SETTINGS.
 	</extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.7.9~mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.9.9~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.2.3" />
@@ -332,15 +332,19 @@ Subscription required.</description>
     <description lang="it">Disney+ è la casa esclusiva per i tuoi film e programmi TV preferiti di Disney, Pixar, Marvel, Star Wars e National Geographic.
 
 Abbonamento richiesto.</description>
+    <description lang="fr">Disney+ est la destination exclusive de vos films et séries TV préférés des univers Disney, Pixar, Marvel, Star Wars et National Geographic.
+
+Abonnement requis.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix Skip Credits and improve Skip Intro</news>
+    <news>Fix Star hub</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>
+
 </addons>
