@@ -1,50 +1,67 @@
-diff -urN script.module.slyguy/resources/lib/proxy.py script.module.slyguy-ttml2ssa/resources/lib/proxy.py
---- script.module.slyguy/resources/lib/proxy.py	2021-05-05 17:23:38.000000000 +0200
-+++ script.module.slyguy-ttml2ssa/resources/lib/proxy.py	2021-05-10 13:35:24.000000000 +0200
-@@ -583,6 +583,10 @@
-         original_language = self._session.get('original_language', '').lower().strip()
-         default_language  = self._session.get('default_language', '').lower().strip()
+diff --git a/addon.xml b/addon.xml
+index 22aa147..e4ea490 100644
+--- a/addon.xml
++++ b/addon.xml
+@@ -1,7 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.44.0">
+   <requires>
+-    <import addon="repository.slyguy"/>
++    <!-- <import addon="repository.slyguy"/> -->
++    <import addon="script.module.ttml2ssa" version="0.2.5" />
+   </requires>
+   <extension point="xbmc.service" library="service.py" start="login" />
+   <extension point="xbmc.python.pluginsource" library="default.py" />
+diff --git a/resources/lib/proxy.py b/resources/lib/proxy.py
+index a87ee29..f5e5d0e 100644
+--- a/resources/lib/proxy.py
++++ b/resources/lib/proxy.py
+@@ -697,6 +697,10 @@ class RequestHandler(BaseHTTPRequestHandler):
+         has_default_subs = False
+         found_default_subs = False
  
-+        use_ttml2ssa = int(self._session.get('use_ttml2ssa', 0))
++        use_ttml2ssa = self._session.get('use_ttml2ssa', False)
 +        if use_ttml2ssa:
 +            m3u8 = re.sub(r'^#EXT-X-MEDIA:TYPE=SUBTITLES.*?$', '#DELETED', m3u8, flags=re.M)
 +
-         if original_language and not default_language:
-             default_language = original_language
- 
-diff -urN script.module.slyguy/resources/modules/slyguy/gui.py script.module.slyguy-ttml2ssa/resources/modules/slyguy/gui.py
---- script.module.slyguy/resources/modules/slyguy/gui.py	2021-05-05 17:23:38.000000000 +0200
-+++ script.module.slyguy-ttml2ssa/resources/modules/slyguy/gui.py	2021-05-10 13:35:24.000000000 +0200
-@@ -331,7 +331,7 @@
+         for line in m3u8.splitlines():
+             if not line.strip():
+                 continue
+diff --git a/resources/modules/slyguy/gui.py b/resources/modules/slyguy/gui.py
+index aba90e3..85fbeb0 100644
+--- a/resources/modules/slyguy/gui.py
++++ b/resources/modules/slyguy/gui.py
+@@ -367,7 +367,7 @@ class Item(object):
          else:
              self.inputstream = None
  
--        def make_sub(url, language='unk', mimetype=''):
-+        def make_sub(url, language='unk', mimetype='', extension='srt'):
+-        def make_sub(url, language='unk', mimetype='', forced=False):
++        def make_sub(url, language='unk', mimetype='',  extension='srt', forced=False):
              if not url.lower().startswith('http') and not url.lower().startswith('plugin://'):
                  return url
  
-@@ -350,7 +350,7 @@
+@@ -386,7 +386,7 @@ class Item(object):
                  url = url_for(ROUTE_WEBVTT, url=url)
                  mimetype = 'text/vtt'
  
--            proxy_url = '{}.srt'.format(language)
-+            proxy_url = '{}.{}'.format(language, extension)
+-            proxy_url = '{}{}.srt'.format(language, '.forced' if forced else '')
++            proxy_url = '{}{}.{}'.format(language, '.forced' if forced else '', extension)
              proxy_data['path_subs'][proxy_url] = url
  
              return u'{}{}'.format(proxy_path, proxy_url)
-@@ -376,6 +376,7 @@
-                 'audio_description': str(int(settings.getBool('audio_description', True))),
-                 'subs_forced': str(int(settings.getBool('subs_forced', True))),
-                 'subs_non_forced': str(int(settings.getBool('subs_non_forced', True))),
-+                'use_ttml2ssa': int(settings.getBool('use_ttml2ssa', False)),
+@@ -414,6 +414,7 @@ class Item(object):
+                 'audio_description': settings.getBool('audio_description', True),
+                 'subs_forced': settings.getBool('subs_forced', True),
+                 'subs_non_forced': settings.getBool('subs_non_forced', True),
++                'use_ttml2ssa': settings.getBool('use_ttml2ssa', False),
+                 'verify_ssl': settings.getBool('verify_ssl', True),
                  'subtitles': [],
                  'path_subs': {},
-                 'addon_id': ADDON_ID,
-diff -urN script.module.slyguy/resources/modules/slyguy/plugin.py script.module.slyguy-ttml2ssa/resources/modules/slyguy/plugin.py
---- script.module.slyguy/resources/modules/slyguy/plugin.py	2021-05-05 17:23:38.000000000 +0200
-+++ script.module.slyguy-ttml2ssa/resources/modules/slyguy/plugin.py	2021-05-10 13:35:24.000000000 +0200
-@@ -265,6 +265,13 @@
+diff --git a/resources/modules/slyguy/plugin.py b/resources/modules/slyguy/plugin.py
+index b311667..2f7acf7 100644
+--- a/resources/modules/slyguy/plugin.py
++++ b/resources/modules/slyguy/plugin.py
+@@ -328,6 +328,13 @@ def _settings(**kwargs):
  @route(ROUTE_WEBVTT)
  @plugin_callback()
  def _webvtt(url, _data_path, _headers, **kwargs):
@@ -56,9 +73,9 @@ diff -urN script.module.slyguy/resources/modules/slyguy/plugin.py script.module.
 +        return _data_path + '|content-type=text/vtt'
 +
      r = Session().get(url, headers=_headers)
- 
      data = r.content.decode('utf8')
-@@ -276,6 +283,40 @@
+     reader = detect_format(data)
+@@ -337,6 +344,40 @@ def _webvtt(url, _data_path, _headers, **kwargs):
  
      return _data_path + '|content-type=text/vtt'
  
@@ -99,9 +116,9 @@ diff -urN script.module.slyguy/resources/modules/slyguy/plugin.py script.module.
  @route(ROUTE_RESET)
  def _reset(**kwargs):
      if not gui.yes_no(_.PLUGIN_RESET_YES_NO):
-@@ -431,6 +472,9 @@
-         except:
-             pass
+@@ -516,6 +557,9 @@ class Item(gui.Item):
+         quality = kwargs.get(QUALITY_TAG, self.quality)
+         is_live = ROUTE_LIVE_TAG in kwargs
  
 +        if settings.getBool('use_ttml2ssa', False) and self.inputstream.manifest_type == 'hls':
 +            self._add_subtitles()
@@ -109,7 +126,7 @@ diff -urN script.module.slyguy/resources/modules/slyguy/plugin.py script.module.
          if quality is None:
              quality = settings.getEnum('default_quality', QUALITY_TYPES, default=QUALITY_ASK)
              if quality == QUALITY_CUSTOM:
-@@ -462,6 +506,41 @@
+@@ -555,6 +599,41 @@ class Item(gui.Item):
          else:
              xbmc.Player().play(self.path, li)
  
@@ -150,4 +167,4 @@ diff -urN script.module.slyguy/resources/modules/slyguy/plugin.py script.module.
 +
  #Plugin.Folder()
  class Folder(object):
-     def __init__(self, title=None, items=None, content='videos', updateListing=False, cacheToDisc=True, sort_methods=None, thumb=None, fanart=None, no_items_label=_.NO_ITEMS, no_items_method='dialog'):
+     def __init__(self, title=None, items=None, content='AUTO', updateListing=False, cacheToDisc=True, sort_methods=None, thumb=None, fanart=None, no_items_label=_.NO_ITEMS, no_items_method='dialog', show_news=True):
