@@ -251,10 +251,10 @@ v1.12.6 (2021-07-16)
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.44.4~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.46.0~mod1">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <!-- <import addon="repository.slyguy"/> -->
+    <import addon="slyguy.dependencies"/>
     <import addon="script.module.ttml2ssa" version="0.2.5" />
   </requires>
   <extension point="xbmc.service" library="service.py" start="login" />
@@ -266,7 +266,7 @@ v1.12.6 (2021-07-16)
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>updated German translation. thanks @TheOppermann</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -301,6 +301,25 @@ v1.12.6 (2021-07-16)
 			<screenshot>resources/screen2.jpg</screenshot>
 		</assets>
 	</extension>
+</addon>
+
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.1">
+  <requires>
+    <!-- <import addon="repository.slyguy"/> -->
+  </requires>
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Dependencies required by all Slyguy add-ons</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news></news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
 </addon>
 
 <addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.9.9~mod1">
