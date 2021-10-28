@@ -251,7 +251,7 @@ v1.12.6 (2021-07-16)
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.46.3~mod">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.46.4~mod">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="slyguy.dependencies"/>
@@ -352,7 +352,7 @@ Abonnement requis.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.6.4">
+<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.6.5">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
