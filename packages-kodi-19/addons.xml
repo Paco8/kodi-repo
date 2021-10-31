@@ -354,7 +354,7 @@ Abonnement requis.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.6.6~mod1">
+<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.6.6~mod2">
   <requires>
     <import addon="script.module.slyguy"/>
   </requires>
