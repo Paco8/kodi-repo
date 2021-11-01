@@ -253,7 +253,7 @@ v1.17.0 (2021-08-13)
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.46.5~mod">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.47.2~mod">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="slyguy.dependencies"/>
@@ -268,7 +268,7 @@ v1.17.0 (2021-08-13)
     <license></license>
     <language></language>
     <website></website>
-    <news>updated German translation. thanks @TheOppermann</news>
+    <news>add Spanish translation. thanks @espinosaivan</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -324,7 +324,7 @@ v1.17.0 (2021-08-13)
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.9.9~mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.10.4~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.2.3" />
@@ -346,7 +346,7 @@ Abonnement requis.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix Star hub</news>
+    <news></news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -354,9 +354,10 @@ Abonnement requis.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.6.6~mod2">
+<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.7.0~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
+    <import addon="script.module.ttml2ssa" version="0.3.4" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -369,7 +370,7 @@ Subscription required.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Improve subtitles</news>
+    <news>Add Spanish translation. thanks @espinosaivan</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
