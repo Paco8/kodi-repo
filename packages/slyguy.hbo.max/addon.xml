@@ -2,7 +2,7 @@
 <addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.7.0~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
-    <import addon="script.module.ttml2ssa" version="0.3.5" />
+    <import addon="script.module.ttml2ssa" version="0.3.4" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
