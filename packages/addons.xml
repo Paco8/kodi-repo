@@ -322,10 +322,10 @@ v1.12.6 (2021-07-16)
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.10.4~mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.10.5~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
-    <import addon="script.module.ttml2ssa" version="0.2.3" />
+    <import addon="script.module.ttml2ssa" version="0.3.4" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
@@ -344,7 +344,7 @@ Abonnement requis.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Fix Because you watched</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
