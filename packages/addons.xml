@@ -251,7 +251,7 @@ v1.12.6 (2021-07-16)
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.48.0~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.48.2~mod1">
   <requires>
     <import addon="slyguy.dependencies"/>
     <import addon="script.module.ttml2ssa" version="0.2.5" />
