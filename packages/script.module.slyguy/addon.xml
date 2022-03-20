@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.49.2~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.51.0~mod1">
   <requires>
     <import addon="slyguy.dependencies"/>
     <import addon="script.module.ttml2ssa" version="0.2.5" />
@@ -13,7 +13,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>add Spanish translation. thanks @espinosaivan</news>
+    <news>Add Czech translation. Thanks @Ricrdsson1</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
