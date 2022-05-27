@@ -253,7 +253,7 @@ To enable it: On Expert settings, set "MSL manifest version" to "Version 1"
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.49.2~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.51.0~mod1">
   <requires>
     <import addon="slyguy.dependencies"/>
     <import addon="script.module.ttml2ssa" version="0.2.5" />
@@ -267,7 +267,7 @@ To enable it: On Expert settings, set "MSL manifest version" to "Version 1"
     <license></license>
     <language></language>
     <website></website>
-    <news>add Spanish translation. thanks @espinosaivan</news>
+    <news>Add Czech translation. Thanks @Ricrdsson1</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -323,7 +323,7 @@ To enable it: On Expert settings, set "MSL manifest version" to "Version 1"
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.11.2~mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.11.3~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
@@ -345,7 +345,7 @@ Abonnement requis.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Support EU portability</news>
+    <news>Fix Search</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -353,7 +353,7 @@ Abonnement requis.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.7.9~mod1">
+<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.9.3~mod1">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
@@ -365,11 +365,14 @@ Abonnement requis.</description>
     <description lang="en">Say hello to HBO Max, the streaming platform that bundles all of HBO together with even more of your favorite movies and TV series, plus new Max Originals.
 
 Subscription required.</description>
+    <description lang="cs">Vítejte na HBO Max, streamovací platformě, která spojuje celou HBO dohromady s ještě větším množstvím vašich oblíbených filmů a seriálů a s novými originálními filmy z produkce Max Originals.
+
+Je potřeba předplatné.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Add Spanish translation. thanks @espinosaivan</news>
+    <news>Fix json error</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
