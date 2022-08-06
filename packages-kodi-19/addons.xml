@@ -277,7 +277,7 @@ To enable it: On Expert settings, set "MSL manifest version" to "Version 1"
 
 <addon	id="script.module.ttml2ssa"
 		name="Improved Subtitles"
-		version="0.3.7"
+		version="0.3.8"
 		provider-name="Paco8">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
