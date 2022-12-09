@@ -149,7 +149,7 @@ Only the year is available, required optional full resync for existing files, on
 
 <addon id="plugin.video.orange.spain"
        name="Orange TV España"
-       version="0.1.12"
+       version="0.1.13"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
