@@ -142,7 +142,7 @@ v1.12.14 (2022-09-26)
 
 <addon id="plugin.video.orange.spain"
        name="Orange TV España"
-       version="0.1.13"
+       version="0.1.16"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
