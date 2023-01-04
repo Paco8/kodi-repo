@@ -154,7 +154,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 
 <addon id="plugin.video.orange.spain"
        name="Orange TV España"
-       version="0.2.8"
+       version="0.3.0"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
