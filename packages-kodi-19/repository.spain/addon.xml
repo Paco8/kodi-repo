@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.spain" name="Spain VOD Repository" version="1.0.0" provider-name="Paco8">
-	<extension point="xbmc.addon.repository" name="Spain VOD Repository">
+<addon id="repository.spain" name="Spain OTT Repository" version="1.0.1" provider-name="Paco8">
+	<extension point="xbmc.addon.repository" name="Spain OTT Repository">
 	<dir>
 		<info compressed="false">https://raw.githubusercontent.com/Paco8/kodi-repo/master/mini-repo/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/Paco8/kodi-repo/master/mini-repo/addons.xml.md5</checksum>
@@ -8,9 +8,12 @@
 	</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>Spain VOD Repository</summary>
+		<summary>Spain OTT Repository</summary>
 		<description></description>
 		<disclaimer></disclaimer>
 		<platform>all</platform>
+		<assets>
+		<icon>icon.png</icon>
+		</assets>
 	</extension>
 </addon>
