@@ -3,7 +3,7 @@
 
 <addon id="plugin.video.movistarplus"
        name="Movistar+"
-       version="0.5.13"
+       version="0.5.14"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
