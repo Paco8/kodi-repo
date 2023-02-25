@@ -3,7 +3,7 @@
 
 <addon id="plugin.video.movistarplus"
        name="Movistar+"
-       version="0.5.20"
+       version="0.6.0"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
@@ -35,6 +35,8 @@
       <screenshot>resources/screen1.jpg</screenshot>
       <screenshot>resources/screen2.jpg</screenshot>
       <screenshot>resources/screen3.jpg</screenshot>
+      <screenshot>resources/screen4.jpg</screenshot>
+      <screenshot>resources/screen5.jpg</screenshot>
     </assets>
   </extension>
 </addon>
