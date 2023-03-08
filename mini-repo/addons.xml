@@ -43,7 +43,7 @@
 
 <addon id="plugin.video.orange.spain"
        name="Orange TV España"
-       version="0.5.7"
+       version="0.5.8"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
