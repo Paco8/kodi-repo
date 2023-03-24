@@ -146,7 +146,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
   </extension>
 </addon>
 
-<addon id="repository.paco8" name="Improved subtitles" version="2.0.3" provider-name="Paco8">
+<addon id="repository.paco8" name="Improved subtitles repository" version="2.0.4" provider-name="Paco8">
 	<extension point="xbmc.addon.repository">
 	<dir minversion="19.0.0">
 		<info compressed="false">https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages-kodi-19/addons.xml</info>
@@ -160,7 +160,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 	</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>Improved subtitles</summary>
+		<summary>Improved subtitles repository</summary>
 		<description>Patched addons for ttml2ssa.</description>
 		<disclaimer></disclaimer>
 		<platform>all</platform>
