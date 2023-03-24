@@ -170,25 +170,6 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 	</extension>
 </addon>
 
-<addon id="repository.spain" name="Spain OTT Repository" version="1.0.1" provider-name="Paco8">
-	<extension point="xbmc.addon.repository" name="Spain OTT Repository">
-	<dir>
-		<info compressed="false">https://raw.githubusercontent.com/Paco8/kodi-repo/master/mini-repo/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/Paco8/kodi-repo/master/mini-repo/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/Paco8/kodi-repo/master/mini-repo</datadir>
-	</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Spain OTT Repository</summary>
-		<description></description>
-		<disclaimer></disclaimer>
-		<platform>all</platform>
-		<assets>
-		<icon>icon.png</icon>
-		</assets>
-	</extension>
-</addon>
-
 <addon id="script.module.mechanicalsoup"
 	name="MechanicalSoup"
 	version="0.12.0"
