@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.paco8" name="Patched addons for ttml2ssa" version="2.0.2" provider-name="Paco8">
+<addon id="repository.paco8" name="Improved subtitles" version="2.0.3" provider-name="Paco8">
 	<extension point="xbmc.addon.repository">
 	<dir minversion="19.0.0">
 		<info compressed="false">https://raw.githubusercontent.com/Paco8/kodi-repo/master/packages-kodi-19/addons.xml</info>
@@ -13,8 +13,8 @@
 	</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>Patched addons for ttml2ssa</summary>
-		<description>For testing.</description>
+		<summary>Improved subtitles</summary>
+		<description>Patched addons for ttml2ssa.</description>
 		<disclaimer></disclaimer>
 		<platform>all</platform>
 		<assets>
