@@ -81,7 +81,7 @@
 
 <addon id="plugin.video.skyott"
        name="Peacock"
-       version="0.1.8"
+       version="0.1.9"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
