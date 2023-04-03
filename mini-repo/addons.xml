@@ -81,7 +81,7 @@
 
 <addon id="plugin.video.skyott"
        name="Peacock"
-       version="0.1.10"
+       version="0.2.0"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
@@ -108,12 +108,10 @@
     <source></source>
     <assets>
       <icon>icon.png</icon>
-      <fanart></fanart>
-      <screenshot></screenshot>
-      <screenshot></screenshot>
-      <screenshot></screenshot>
-      <screenshot></screenshot>
-      <screenshot></screenshot>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screen1.jpg</screenshot>
+      <screenshot>resources/screen2.jpg</screenshot>
+      <screenshot>resources/screen3.jpg</screenshot>
     </assets>
   </extension>
 </addon>
