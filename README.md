@@ -3,7 +3,7 @@ This repo for kodi contains modified versions of the netflix, amazon, hbo max an
 
 # Installation
 To install this repo in kodi, download and install this package:
-[repository.paco8-2.0.1.zip](https://github.com/Paco8/kodi-repo/blob/master/packages/repository.paco8/repository.paco8-2.0.1.zip?raw=true)
+[repository.paco8-2.0.1.zip](https://github.com/Paco8/kodi-repo/blob/master/packages/repository.paco8/repository.paco8-2.0.4.zip?raw=true)
 
 # Use of the modified addons
 After installing any of the addons you'll see a new addon:
