@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.51.0~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.51.0~mod2">
   <requires>
     <import addon="slyguy.dependencies"/>
-    <import addon="script.module.ttml2ssa" version="0.2.5" />
   </requires>
   <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.python.pluginsource" library="default.py" />
