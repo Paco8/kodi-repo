@@ -215,7 +215,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.51.0~mod2">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.51.0~mod3">
   <requires>
     <import addon="slyguy.dependencies"/>
   </requires>
@@ -288,7 +288,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.11.3~mod2">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.11.3~mod3">
   <requires>
     <import addon="script.module.slyguy"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
