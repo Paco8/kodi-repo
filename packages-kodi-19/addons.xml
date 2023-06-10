@@ -46,7 +46,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="1.20.7~mod1" provider-name="libdev, jojo, asciidisco, caphm, castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.22.0~mod1" provider-name="libdev, jojo, asciidisco, caphm, castagnait">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.addon.signals" version="0.0.6+matrix.1"/>
@@ -134,9 +134,10 @@
     <email></email>
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
-    <news>v1.20.7 (2023-02-21)
-- Workaround/fix for wrong plot language due to website bug
-- Cleanup/fix ListItem deprecated methods/properties (Kodi 20)
+    <news>v1.22.0 (2023-04-12)
+- New minimise black bars settings (Kodi 20 and above)
+- Kodi "View mode" setting is no longer reset by default
+- Update translations hu, pl, de, it, zh_tw, ro
     </news>
   </extension>
 </addon>
