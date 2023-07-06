@@ -215,9 +215,10 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.51.0~mod3">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.67.8~mod1">
   <requires>
-    <import addon="slyguy.dependencies"/>
+    <import addon="slyguy.dependencies" version="0.0.8"/>
+    <!-- <import addon="repository.slyguy" version="0.0.4"/> -->
   </requires>
   <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.python.pluginsource" library="default.py" />
@@ -228,7 +229,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
     <license></license>
     <language></language>
     <website></website>
-    <news>Add Czech translation. Thanks @Ricrdsson1</news>
+    <news></news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -269,7 +270,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 	</extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.1">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.8">
   <requires>
     <!-- <import addon="repository.slyguy"/> -->
   </requires>
@@ -280,7 +281,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Add dnspython 1.16.0</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -288,9 +289,9 @@ there are no know solutions yet, so you can only report the 540p problem to cust
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.11.3~mod3">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.8~mod3">
   <requires>
-    <import addon="script.module.slyguy"/>
+    <import addon="script.module.slyguy" version="0.63.1"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
@@ -306,11 +307,14 @@ Abbonamento richiesto.</description>
     <description lang="fr">Disney+ est la destination exclusive de vos films et séries TV préférés des univers Disney, Pixar, Marvel, Star Wars et National Geographic.
 
 Abonnement requis.</description>
+    <description lang="cs">Disney+ je exkluzivní místo pro vaše oblíbené filmy a televizní pořady ze světa Disney, Pixar, Marvel, Star Wars a National Geographic.
+
+Je nutné předplatné.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix Search</news>
+    <news>Support OTP email code login</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -318,9 +322,9 @@ Abonnement requis.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.9.8~mod4">
+<addon id="slyguy.hbo.max" name="HBO Max" provider-name="Slyguy" version="0.10.7~mod5">
   <requires>
-    <import addon="script.module.slyguy"/>
+    <import addon="script.module.slyguy" version="0.63.1"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
@@ -337,7 +341,7 @@ Je potřeba předplatné.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix some subs not working</news>
+    <news>Add Skip Intros. Thanks @sile70000</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>

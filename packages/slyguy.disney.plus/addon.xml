@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.11.3~mod3">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.8~mod3">
   <requires>
-    <import addon="script.module.slyguy"/>
+    <import addon="script.module.slyguy" version="0.63.1"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
@@ -17,11 +17,14 @@ Abbonamento richiesto.</description>
     <description lang="fr">Disney+ est la destination exclusive de vos films et séries TV préférés des univers Disney, Pixar, Marvel, Star Wars et National Geographic.
 
 Abonnement requis.</description>
+    <description lang="cs">Disney+ je exkluzivní místo pro vaše oblíbené filmy a televizní pořady ze světa Disney, Pixar, Marvel, Star Wars a National Geographic.
+
+Je nutné předplatné.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix Search</news>
+    <news>Support OTP email code login</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
