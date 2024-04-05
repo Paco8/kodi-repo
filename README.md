@@ -19,5 +19,5 @@ You can configure in it the look of the subtitles and other options:
 * [amazon](https://github.com/Paco8/xbmc/tree/ttml2ssa) [[view changes](https://github.com/Paco8/xbmc/compare/master..ttml2ssa)]
 * [netflix (matrix)](https://github.com/Paco8/plugin.video.netflix/tree/Matrix-ttml2ssa) [[view changes](https://github.com/Paco8/plugin.video.netflix/compare/Matrix..Matrix-ttml2ssa)]
 * [netflix (leia)](https://github.com/Paco8/plugin.video.netflix/tree/Leia-ttml2ssa) [[view changes](https://github.com/Paco8/plugin.video.netflix/compare/Leia..Leia-ttml2ssa)]
-* [disney+](https://github.com/Paco8/slyguy.disney.plus) [[view changes](https://github.com/Paco8/slyguy.disney.plus/compare/main...ttml2ssa2)]
+* [disney+](https://github.com/Paco8/slyguy.disney.plus) [[view changes](https://github.com/Paco8/slyguy.disney.plus/compare/main...ttml2ssa2.diff)]
 * [hbo max](https://github.com/Paco8/slyguy.addons/tree/master/slyguy.hbo.max)
