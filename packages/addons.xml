@@ -3,7 +3,7 @@
 ﻿
 <addon id="plugin.video.amazon-test"
        name="Amazon VOD"
-       version="1.0.6~beta1-mod1"
+       version="1.0.7~beta1-mod1"
        provider-name="Sandmann79, Varstahl">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
