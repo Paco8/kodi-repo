@@ -212,21 +212,24 @@
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.67.8~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.80.9">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.8"/>
+    <import addon="slyguy.dependencies" version="0.0.18"/>
     <!-- <import addon="repository.slyguy" version="0.0.4"/> -->
   </requires>
-  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="xbmc.python.script" library="script.py">
+    <provides>executable</provides>
+  </extension>
   <extension point="xbmc.python.pluginsource" library="default.py" />
+  <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Common code required by all Slyguy add-ons</description>
+    <description lang="en">Common code, proxy and settings required by all Slyguy add-ons</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Add Play next and Queue item context menu items</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -267,7 +270,7 @@
 	</extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.8">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.18">
   <requires>
     <!-- <import addon="repository.slyguy"/> -->
   </requires>
@@ -278,7 +281,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>Add dnspython 1.16.0</news>
+    <news>Update six. Add looseversion</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -286,7 +289,7 @@
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.8~mod3">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.16.6~mod1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
@@ -307,11 +310,14 @@ Abonnement requis.</description>
     <description lang="cs">Disney+ je exkluzivní místo pro vaše oblíbené filmy a televizní pořady ze světa Disney, Pixar, Marvel, Star Wars a National Geographic.
 
 Je nutné předplatné.</description>
+      <description lang="pl">Disney+ to wyłączne miejsce dla twoich ulubionych filmów i programów telewizyjnych od Disneya, Pixara, Marvela, Gwiezdnych wojen i National Geographic.
+
+Wymagana subskrypcja.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Support OTP email code login</news>
+    <news>Hide DTS-X setting as will not work until Kodi 22</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
