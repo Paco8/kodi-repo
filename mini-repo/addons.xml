@@ -117,25 +117,6 @@
   </extension>
 </addon>
 
-<addon id="repository.addons.paco8" name="Addons by Paco8" version="1.0.0" provider-name="Paco8">
-	<extension point="xbmc.addon.repository">
-	<dir>
-		<info compressed="false">https://raw.githubusercontent.com/Paco8/kodi-repo/master/mini-repo/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/Paco8/kodi-repo/master/mini-repo/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/Paco8/kodi-repo/master/mini-repo</datadir>
-	</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Addons by Paco8</summary>
-		<description></description>
-		<disclaimer></disclaimer>
-		<platform>all</platform>
-		<assets>
-		<icon>icon.jpg</icon>
-		</assets>
-	</extension>
-</addon>
-
 <addon id="repository.spain" name="Spain OTT Repository" version="1.0.2" provider-name="Paco8">
 	<extension point="xbmc.addon.repository">
 	<dir>
