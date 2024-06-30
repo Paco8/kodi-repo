@@ -215,21 +215,32 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.67.8~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.82.6">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.8"/>
+    <import addon="slyguy.dependencies" version="0.0.18"/>
     <!-- <import addon="repository.slyguy" version="0.0.4"/> -->
   </requires>
-  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="default.py">
+        <label>$LOCALIZE[20410]</label>
+        <visible>!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)] + Integer.IsEqual(Window(10000).Property(_slyguy_donor),1)</visible>
+      </item>
+    </menu>
+  </extension>
+  <extension point="xbmc.python.script" library="script.py">
+    <provides>executable</provides>
+  </extension>
   <extension point="xbmc.python.pluginsource" library="default.py" />
+  <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Common code required by all Slyguy add-ons</description>
+    <description lang="en">Common code, proxy and settings required by all Slyguy add-ons</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Add Play next and Queue item context menu items</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -270,7 +281,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 	</extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.8">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.18">
   <requires>
     <!-- <import addon="repository.slyguy"/> -->
   </requires>
@@ -281,7 +292,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
     <license></license>
     <language></language>
     <website></website>
-    <news>Add dnspython 1.16.0</news>
+    <news>Update six. Add looseversion</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -289,7 +300,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.13.8~mod3">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.16.6~mod1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
@@ -310,11 +321,41 @@ Abonnement requis.</description>
     <description lang="cs">Disney+ je exkluzivní místo pro vaše oblíbené filmy a televizní pořady ze světa Disney, Pixar, Marvel, Star Wars a National Geographic.
 
 Je nutné předplatné.</description>
+      <description lang="pl">Disney+ to wyłączne miejsce dla twoich ulubionych filmów i programów telewizyjnych od Disneya, Pixara, Marvela, Gwiezdnych wojen i National Geographic.
+
+Wymagana subskrypcja.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Support OTP email code login</news>
+    <news>Hide DTS-X setting as will not work until Kodi 22</news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="slyguy.max" name="Max" provider-name="Slyguy" version="0.1.0~mod1">
+  <requires>
+    <import addon="script.module.slyguy" version="0.63.1"/>
+    <import addon="script.module.ttml2ssa" version="0.3.4" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Say hello to Max, the streaming platform that bundles all of HBO together with even more of your favorite movies and TV series, plus new Max Originals.
+
+Subscription required.</description>
+    <description lang="cs">Vítejte na Max, streamovací platformě, která spojuje celou HBO dohromady s ještě větším množstvím vašich oblíbených filmů a seriálů a s novými originálními filmy z produkce Max Originals.
+
+Je potřeba předplatné.</description>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news>Add PL translation. Thanks @hevet</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>

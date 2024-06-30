@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.67.8~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.82.6">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.8"/>
+    <import addon="slyguy.dependencies" version="0.0.18"/>
     <!-- <import addon="repository.slyguy" version="0.0.4"/> -->
   </requires>
-  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="default.py">
+        <label>$LOCALIZE[20410]</label>
+        <visible>!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)] + Integer.IsEqual(Window(10000).Property(_slyguy_donor),1)</visible>
+      </item>
+    </menu>
+  </extension>
+  <extension point="xbmc.python.script" library="script.py">
+    <provides>executable</provides>
+  </extension>
   <extension point="xbmc.python.pluginsource" library="default.py" />
+  <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Common code required by all Slyguy add-ons</description>
+    <description lang="en">Common code, proxy and settings required by all Slyguy add-ons</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news></news>
+    <news>Add Play next and Queue item context menu items</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
