@@ -215,11 +215,15 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.82.6">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.23~mod2">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.18"/>
-    <!-- <import addon="repository.slyguy" version="0.0.4"/> -->
+    <import addon="slyguy.dependencies" version="0.0.19"/>
+    <!-- <import addon="repository.slyguy" version="0.0.9"/> -->
   </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="kodi.context.item">
     <menu id="kodi.core.main">
       <item library="default.py">
@@ -228,11 +232,6 @@ there are no know solutions yet, so you can only report the 540p problem to cust
       </item>
     </menu>
   </extension>
-  <extension point="xbmc.python.script" library="script.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.python.pluginsource" library="default.py" />
-  <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Common code, proxy and settings required by all Slyguy add-ons</description>
@@ -240,7 +239,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
     <license></license>
     <language></language>
     <website></website>
-    <news>Add Play next and Queue item context menu items</news>
+    <news>Brand new settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -281,7 +280,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
 	</extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.18">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.19">
   <requires>
     <!-- <import addon="repository.slyguy"/> -->
   </requires>
@@ -292,7 +291,7 @@ there are no know solutions yet, so you can only report the 540p problem to cust
     <license></license>
     <language></language>
     <website></website>
-    <news>Update six. Add looseversion</news>
+    <news>Add filelock</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
