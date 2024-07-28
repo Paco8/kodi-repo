@@ -278,7 +278,7 @@
 	</extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.18">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.19">
   <requires>
     <!-- <import addon="repository.slyguy"/> -->
   </requires>
@@ -289,7 +289,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>Update six. Add looseversion</news>
+    <news>Add filelock</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
