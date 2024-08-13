@@ -116,7 +116,7 @@
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.52~mod1">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.52~mod2">
   <requires>
     <import addon="slyguy.dependencies" version="0.0.19"/>
     <!-- <import addon="repository.slyguy" version="0.0.9"/> -->
