@@ -116,9 +116,9 @@
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.84.52~mod2">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.85.8~mod1">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.19"/>
+    <import addon="slyguy.dependencies" version="0.0.20"/>
     <!-- <import addon="repository.slyguy" version="0.0.9"/> -->
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -140,7 +140,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>Brand new settings!</news>
+    <news>Move userdata and bookmarks into settings!</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
