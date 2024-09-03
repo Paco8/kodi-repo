@@ -81,7 +81,7 @@
 
 <addon id="plugin.video.skyott"
        name="SkyOtt"
-       version="0.5.9"
+       version="0.6.0"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
