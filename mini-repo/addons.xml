@@ -3,7 +3,7 @@
 
 <addon id="plugin.video.movistarplus"
        name="Movistar+"
-       version="0.9.12"
+       version="0.9.13"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
@@ -43,7 +43,7 @@
 
 <addon id="plugin.video.orange.spain"
        name="Orange TV España"
-       version="0.9.3"
+       version="0.9.4"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
@@ -81,7 +81,7 @@
 
 <addon id="plugin.video.skyott"
        name="SkyOtt"
-       version="0.6.2"
+       version="0.6.3"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
