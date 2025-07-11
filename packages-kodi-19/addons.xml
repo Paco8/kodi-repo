@@ -236,7 +236,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.max" name="Max" provider-name="Slyguy" version="0.2.0-mod1">
+<addon id="slyguy.max" name="Max" provider-name="Slyguy" version="0.2.0-mod2">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
