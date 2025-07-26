@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="slyguy.max" name="Max" provider-name="Slyguy" version="0.2.0-mod2">
+<addon id="slyguy.max" name="HBO Max" provider-name="Slyguy" version="0.2.3-mod1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
@@ -8,20 +8,20 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Say hello to Max, the streaming platform that bundles all of HBO together with even more of your favorite movies and TV series, plus new Max Originals.
+    <description lang="en">Say hello to HBO Max, the streaming platform that bundles all of HBO together with even more of your favorite movies and TV series, plus new Max Originals.
 
 Subscription required.</description>
-    <description lang="cs">Vítejte na Max, streamovací platformě, která spojuje celou HBO dohromady s ještě větším množstvím vašich oblíbených filmů a seriálů a s novými originálními filmy z produkce Max Originals.
+    <description lang="cs">Vítejte na HBO Max, streamovací platformě, která spojuje celou HBO dohromady s ještě větším množstvím vašich oblíbených filmů a seriálů a s novými originálními filmy z produkce Max Originals.
 
 Je potřeba předplatné.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix viewing some shows</news>
+    <news>Rebrand to HBO Max</news>
     <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
+      <icon>icon2.png</icon>
+      <fanart>fanart2.jpg</fanart>
     </assets>
   </extension>
 </addon>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.17.0~mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.20.23-mod1">
   <requires>
-    <import addon="script.module.slyguy" version="0.84.0"/>
+    <import addon="script.module.slyguy" version="0.85.87"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
@@ -27,7 +27,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Use new settings!</news>
+    <news>Fix profiles</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>

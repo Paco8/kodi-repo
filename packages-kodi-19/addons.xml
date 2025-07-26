@@ -116,23 +116,15 @@
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.85.8~mod2">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.86.37-mod1">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.20"/>
+    <import addon="slyguy.dependencies" version="0.0.28"/>
     <!-- <import addon="repository.slyguy" version="0.0.9"/> -->
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
   </extension>
   <extension point="xbmc.service" library="service.py" start="login" />
-  <extension point="kodi.context.item">
-    <menu id="kodi.core.main">
-      <item library="default.py">
-        <label>$LOCALIZE[20410]</label>
-        <visible>!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)] + Integer.IsEqual(Window(10000).Property(_slyguy_trailer_context_menu),1)</visible>
-      </item>
-    </menu>
-  </extension>
   <extension point="xbmc.python.module" library="resources/modules" />
   <extension point="xbmc.addon.metadata">
     <description lang="en">Common code, proxy and settings required by all Slyguy add-ons</description>
@@ -140,7 +132,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>Move userdata and bookmarks into settings!</news>
+    <news>Add Remove Framerate Hints video setting</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -181,7 +173,7 @@
 	</extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.20">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.29">
   <requires>
     <!-- <import addon="repository.slyguy"/> -->
   </requires>
@@ -192,7 +184,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>update peewee. add peewee playhouse. add pymysql</news>
+    <news>remove python qrcode</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -200,9 +192,9 @@
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.17.0~mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.20.23-mod1">
   <requires>
-    <import addon="script.module.slyguy" version="0.84.0"/>
+    <import addon="script.module.slyguy" version="0.85.87"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
@@ -228,7 +220,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Use new settings!</news>
+    <news>Fix profiles</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -236,7 +228,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.max" name="Max" provider-name="Slyguy" version="0.2.0-mod2">
+<addon id="slyguy.max" name="HBO Max" provider-name="Slyguy" version="0.2.3-mod1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
@@ -245,20 +237,20 @@ Wymagana subskrypcja.</description>
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <description lang="en">Say hello to Max, the streaming platform that bundles all of HBO together with even more of your favorite movies and TV series, plus new Max Originals.
+    <description lang="en">Say hello to HBO Max, the streaming platform that bundles all of HBO together with even more of your favorite movies and TV series, plus new Max Originals.
 
 Subscription required.</description>
-    <description lang="cs">Vítejte na Max, streamovací platformě, která spojuje celou HBO dohromady s ještě větším množstvím vašich oblíbených filmů a seriálů a s novými originálními filmy z produkce Max Originals.
+    <description lang="cs">Vítejte na HBO Max, streamovací platformě, která spojuje celou HBO dohromady s ještě větším množstvím vašich oblíbených filmů a seriálů a s novými originálními filmy z produkce Max Originals.
 
 Je potřeba předplatné.</description>
     <reuselanguageinvoker>true</reuselanguageinvoker>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix viewing some shows</news>
+    <news>Rebrand to HBO Max</news>
     <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
+      <icon>icon2.png</icon>
+      <fanart>fanart2.jpg</fanart>
     </assets>
   </extension>
 </addon>
