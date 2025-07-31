@@ -81,7 +81,7 @@
 
 <addon id="plugin.video.skyott"
        name="SkyOtt"
-       version="0.8.3"
+       version="0.8.4"
        provider-name="Paco8">
   <requires>
   <!--- <import addon="xbmc.python" version="2.25.0"/> -->
@@ -89,6 +89,7 @@
   <import addon="script.module.inputstreamhelper" version="0.5.2" />
   <import addon="script.module.dateutil"/>
   <import addon="script.module.ttml2ssa" version="0.1.16" />
+  <import addon="script.module.pywidevine" version="0.1.0" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
   <provides>video</provides>
@@ -136,6 +137,21 @@
 		<icon>icon.png</icon>
 		</assets>
 	</extension>
+</addon>
+<addon id="script.module.pywidevine"
+       name="pywidevine"
+       version="0.1.0"
+       provider-name="Paco8">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.pycryptodome" version="3.4.3"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>pywidevine</summary>
+    <description>The pywidevine library</description>
+    <!-- <platform>linux windows</platform> -->
+  </extension>
 </addon>
 
 <addon	id="script.module.ttml2ssa"

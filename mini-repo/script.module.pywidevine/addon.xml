@@ -1,0 +1,15 @@
+<addon id="script.module.pywidevine"
+       name="pywidevine"
+       version="0.1.0"
+       provider-name="Paco8">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.pycryptodome" version="3.4.3"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>pywidevine</summary>
+    <description>The pywidevine library</description>
+    <!-- <platform>linux windows</platform> -->
+  </extension>
+</addon>
