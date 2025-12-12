@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <addons>
-
+﻿
 <addon id="plugin.video.amazon-test"
        name="Amazon VOD"
-       version="1.1.6~beta1-mod1"
+       version="1.1.7~beta1-mod1"
        provider-name="Sandmann79, Varstahl">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -12,8 +12,8 @@
     <import addon="script.module.pyxbmct" version="1.3.1"/>
     <import addon="script.module.inputstreamhelper" version="0.4.4"/>
     <import addon="script.module.requests" version="2.22.0"/>
-    <import addon="script.module.kodi-six" version="0.1.3.1"/>
     <import addon="script.module.pyautogui" version="0.9.49"/>
+    <import addon="script.module.amazoncaptcha" version="0.5.11"/>
     <import addon="script.module.ttml2ssa" version="0.1.16" />
   </requires>
   <extension point="xbmc.python.pluginsource"
@@ -69,6 +69,25 @@
 		<icon>icon.png</icon>
 		</assets>
 	</extension>
+</addon>
+
+<addon id="script.module.amazoncaptcha"
+       name="amazoncaptcha"
+       version="0.5.11"
+       provider-name="Anatolii Maliarov">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.pil" version="1.1.7"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Pillow-based solver for Amazon's text captcha</summary>
+    <description lang="en_GB">Pillow-based solver for Amazon's text captcha</description>
+    <license>MIT License</license>
+    <platform>all</platform>
+    <website>https://github.com/a-maliarov/amazoncaptcha</website>
+    <source>https://github.com/a-maliarov/amazoncaptcha</source>
+  </extension>
 </addon>
 
 <addon id="script.module.mechanicalsoup"
