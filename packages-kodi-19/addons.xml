@@ -135,9 +135,9 @@
 	</extension>
 </addon>
 
-<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.86.37-mod2">
+<addon id="script.module.slyguy" name="SlyGuy Common" provider-name="SlyGuy" version="0.86.96-mod1">
   <requires>
-    <import addon="slyguy.dependencies" version="0.0.28"/>
+    <import addon="slyguy.dependencies" version="0.0.30"/>
     <!-- <import addon="repository.slyguy" version="0.0.9"/> -->
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -151,7 +151,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>Add Remove Framerate Hints video setting</news>
+    <news>Fix session recursion errors. thanks @mcinteerj</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -192,7 +192,7 @@
 	</extension>
 </addon>
 
-<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.29">
+<addon id="slyguy.dependencies" name="SlyGuy Dependencies" provider-name="SlyGuy" version="0.0.30">
   <requires>
     <!-- <import addon="repository.slyguy"/> -->
   </requires>
@@ -203,7 +203,7 @@
     <license></license>
     <language></language>
     <website></website>
-    <news>remove python qrcode</news>
+    <news>add ntplib for accurate epoch</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -211,9 +211,9 @@
   </extension>
 </addon>
 
-<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.20.23-mod1">
+<addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.20.33-mod1">
   <requires>
-    <import addon="script.module.slyguy" version="0.85.87"/>
+    <import addon="script.module.slyguy" version="0.86.49"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
@@ -239,7 +239,7 @@ Wymagana subskrypcja.</description>
     <license></license>
     <language></language>
     <website></website>
-    <news>Fix profiles</news>
+    <news>Add back forced subs</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
@@ -247,7 +247,7 @@ Wymagana subskrypcja.</description>
   </extension>
 </addon>
 
-<addon id="slyguy.max" name="HBO Max" provider-name="Slyguy" version="0.2.6-mod3">
+<addon id="slyguy.max" name="HBO Max" provider-name="Slyguy" version="0.2.9-mod1">
   <requires>
     <import addon="script.module.slyguy" version="0.63.1"/>
     <import addon="script.module.ttml2ssa" version="0.3.4" />
@@ -268,8 +268,8 @@ Je potřeba předplatné.</description>
     <website></website>
     <news>Add My List support</news>
     <assets>
-      <icon>icon2.png</icon>
-      <fanart>fanart2.jpg</fanart>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>
